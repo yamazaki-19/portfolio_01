@@ -1,7 +1,8 @@
 @use'./settings/index' as *;
 // サイト全体の基本設定
 body {
-  color: var(--maincolor);
+  background-color: var(--maincolor);
+  color: var(--colorBlack);
   font-size: 14px;
   font-family: var(--font);
 }

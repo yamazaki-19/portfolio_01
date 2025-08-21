@@ -437,7 +437,8 @@ template {
 }
 
 body {
-  color: var(--maincolor);
+  background-color: var(--maincolor);
+  color: var(--colorBlack);
   font-size: 14px;
   font-family: var(--font);
 }
