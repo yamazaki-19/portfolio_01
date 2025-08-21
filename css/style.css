@@ -435,4 +435,26 @@ template {
 :root {
   --speed: .4s;
 }
+
+body {
+  color: var(--maincolor);
+  font-size: 14px;
+  font-family: var(--font);
+}
+
+a {
+  -webkit-transition: opacity var(--speed);
+  transition: opacity var(--speed);
+}
+@media (hover: hover) {
+  a:hover {
+    opacity: 0.7;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
 /*# sourceMappingURL=style.css.map */

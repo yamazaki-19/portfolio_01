@@ -1,1 +1,20 @@
 @use'./settings/index' as *;
+// サイト全体の基本設定
+body {
+  color: var(--maincolor);
+  font-size: 14px;
+  font-family: var(--font);
+}
+a {
+  transition: opacity var(--speed);
+
+  @include hover {
+    opacity: .7;
+  }
+}
+// 画像全て適用　はみ出さないようにしてすき間できるバグ対策
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
