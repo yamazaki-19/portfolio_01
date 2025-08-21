@@ -421,4 +421,18 @@ template {
 [hidden] {
   display: none;
 }
+
+:root {
+  --colorBlack: #21180d;
+  --colorKey: #5e7939;
+  --maincolor: #f7f7f2;
+}
+
+:root {
+  --font: "helvetica", sans-serif;
+}
+
+:root {
+  --speed: .4s;
+}
 /*# sourceMappingURL=style.css.map */
