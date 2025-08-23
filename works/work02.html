@@ -28,11 +28,6 @@
 
     <!--【開発用】検索除外　本番公開したら必ず削除すること！-->
     <meta name="robots" content="noindex,nofollow" />
-
-    <!--ブラウザのスタイルの削除-->
-    <link rel="stylesheet" href="../css/reset.css" />
-    <!--ベースのスタイルの設置-->
-    <link rel="stylesheet" href="../css/base.css" />
     <!--基本のスタイルの設置-->
     <link rel="stylesheet" href="../css/style.css" />
     <title>Works | ERIKO YAMAZAKI Portfolio</title>
@@ -40,26 +35,33 @@
   </head>
   <body>
     <!-- ヘッダー -->
-    <header>
-      <div class="container">
-        <nav>
-          <a class="logo" href="../index.html">ERIKO YAMAZAKI</a>
-          <!-- ハンバーガーボタン -->
-          <button class="hamburger" aria-label="メニュー開閉">
-            <span class="hamburger_bar"></span>
-            <span class="hamburger_bar"></span>
-            <span class="hamburger_bar"></span>
-          </button>
-          <!-- ナビメニュー -->
-          <div class="menu_overlay">
-            <ul>
-              <li class="only-sp"><a href="index.html">Home</a></li>
-              <li><a href="about.html">Profile</a></li>
-              <li><a href="index.html#works">Works</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </div>
+    <header class="header">
+      <div class="container_header">
+        <!-- ロゴ -->
+        <a class="logo" href="../index.html">ERIKO YAMAZAKI</a>
+        <!-- ナビpc -->
+        <nav class="nav nav_pc">
+          <ul class="nav_list">
+            <li><a href="../about.html">Profile</a></li>
+            <li><a href="../index.html#works">Works</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </nav>
+        <!-- ハンバーガーボタン -->
+        <button class="hamburger" aria-label="メニュー開閉">
+          <span class="hamburger_bar"></span>
+          <span class="hamburger_bar"></span>
+          <span class="hamburger_bar"></span>
+        </button>
+      </div>
+      <!-- spオーバーレイメニュー -->
+      <div class="menu_overlay_sp">
+        <ul class="nav_list">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">Profile</a></li>
+          <li><a href="../index.html#works">Works</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
       </div>
     </header>
     <!-- トップに戻るボタン -->
@@ -209,5 +211,6 @@
     <footer>
       <small>© 2025 ERIKO YAMAZAKI</small>
     </footer>
+    <script src="../js/hamburger.js" defer></script>
   </body>
 </html>

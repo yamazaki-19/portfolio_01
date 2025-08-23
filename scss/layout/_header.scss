@@ -1,54 +1,148 @@
-.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 160px;
-  z-index: 1000;
+@use '../foundation/settings/variable' as *;
+@use '../foundation/settings/mixin' as *;
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 160px; 
+    background-color: var(--maincolor);
+    z-index: 1000;
+    @include media(768px) {
+        height: 100px; 
+    }
 }
-
-header.container {
-  padding-left: 0;
-}
-
-// ナビPC
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  // ロゴ
-  .logo {
+// ヘッダー内コンテナ
+.container_header{
+    max-width: 1360px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 80px;
+    padding-left: 0;
+    padding-bottom: 45px;
+    padding-right: 40px;
+    @include media(768px) {
+        padding-top: 60px;
+        padding-right: 20px;
+        padding-bottom: 15px;
+}}
+// ロゴ
+.logo{
     display: inline-block;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
     color: var(--maincolor);
-    background: var(--colorBlack);
-    padding: 7px 16px;
+    background-color: var(--colorBlack);
+    padding: 10px 33px;
     text-align: center;
+     @include media(768px) {
+    font-size: 12px;
+    padding: 7px 16px; 
   }
-
-  // ナビPC
-  ul {
+}
+// ナビpc
+.nav_pc{
     display: flex;
-    gap: 76px;
-    margin: 0;
-    padding: 0;
-
-    li:last-child {
-      margin-right: 86px;
+    align-items: center;
+    .nav_list{
+        display: flex;
+        gap: 76px;
+        margin: 0;
+        padding:10px 0 0 0;
+        list-style: none;
+        li:last-child{
+            margin-right: 86px;
+        }
+        li.only-sp{
+            display: none;
+        }
+        a{
+            font-weight: 300;
+            color: var(--colorBlack);
+            text-decoration: none;
+        }
+        
+    }@include media(768px) {
+        display: none;
+    }
     }
 
-    li.only-sp {
-      display: none;
-    }
 
-    a {
-      font-weight: 300;
+    //ハンバーガーメニューpc非表示
+    .hamburger{
+        display: none;
+        @include media(768px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 40px;
+            height: 20px;
+            background:none;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            z-index: 1100;
+            span.hamburger_bar{
+                display: block;
+                height: 2px;
+                background-color: var(--colorBlack);
+                border-radius: 1px;
+                transition: all 0.3s;
+            }
+        }   
+    } 
+
+  // SPメニューオーバーレイ
+  .menu_overlay_sp{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--colororange);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    &.active{
+        opacity: 1;
+        visibility: visible;
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        li a {
+            color: var(--maincolor);
+            font-size:16px;
+            font-weight: 300;
+            text-decoration: none;
+        }
     }
   }
 
-  .hamburger {
-    display: none;
-  }
+  // SP開閉時のバッテン変化（JS制御用クラス）
+.hamburger.active span.hamburger_bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px,8px);
+  background-color: var(--maincolor);
+}
+
+.hamburger.active span.hamburger_bar:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span.hamburger_bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -8px);
+  background-color: var(--maincolor);
 }

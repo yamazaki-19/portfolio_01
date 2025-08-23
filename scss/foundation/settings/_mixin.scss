@@ -1,5 +1,8 @@
 //メディアクエリ
-@mixin media($breakpoint: 768px) {
+$sp: 768px;
+$tab: 1024px;
+
+@mixin media($breakpoint: $sp) {
   @media (max-width: $breakpoint) {
     @content;
   }
