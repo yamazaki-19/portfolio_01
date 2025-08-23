@@ -483,6 +483,11 @@ img {
 .firstview {
   margin-top: 160px;
 }
+@media (max-width: 768px) {
+  .firstview {
+    margin-top: 100px;
+  }
+}
 
 .header {
   position: fixed;
