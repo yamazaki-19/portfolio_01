@@ -685,4 +685,32 @@ img {
           transform: rotate(-45deg) translate(5px, -8px);
   background-color: var(--maincolor);
 }
+
+.footer {
+  background-color: var(--colorKey);
+  padding: 14px 0;
+  text-align: center;
+  color: var(--maincolor);
+  font-size: 12px;
+  font-weight: 300;
+}
+@media (max-width: 768px) {
+  .footer {
+    padding: 6px 0;
+    font-size: 8px;
+  }
+}
+.footer .container_footer {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 /*# sourceMappingURL=style.css.map */

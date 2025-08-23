@@ -1,0 +1,20 @@
+@use '../foundation/settings/variable' as *;
+@use '../foundation/settings/mixin' as *;
+.footer{
+    background-color: var(--colorKey);
+    padding: 14px 0;
+    text-align: center;
+    color: var(--maincolor);
+    font-size: 12px;
+    font-weight: 300;
+     @include media(768px) {
+    padding: 6px 0;  
+    font-size: 8px;
+}
+.container_footer {
+    max-width: 1360px; 
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+  }}
