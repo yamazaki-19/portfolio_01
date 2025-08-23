@@ -19,3 +19,22 @@ img {
   height: auto;
   vertical-align: middle;
 }
+// コンテンツ幅の統一
+.container {
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+
+  @include media(max-width 768px) {
+    max-width: 313px;
+  }
+}
+.container_works{
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 40px;
+  @include media(max-width 768px) {
+    max-width: 313px;
+  }
+}

@@ -41,22 +41,26 @@
   <body>
     <!-- ヘッダー -->
     <header>
-      <nav>
-        <a href="../index.html">ERIKO YAMAZAKI</a>
-        <!-- ハンバーガーボタン -->
-        <button class="hamburger" aria-label="メニュー開閉">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <!-- ナビメニュー -->
-        <ul>
-          <li class="only-sp"><a href="../index.html">Home</a></li>
-          <li><a href="../about.html">Profile</a></li>
-          <li><a href="../index.html#works">Works</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+      <div class="container">
+        <nav>
+          <a class="logo" href="../index.html">ERIKO YAMAZAKI</a>
+          <!-- ハンバーガーボタン -->
+          <button class="hamburger" aria-label="メニュー開閉">
+            <span class="hamburger_bar"></span>
+            <span class="hamburger_bar"></span>
+            <span class="hamburger_bar"></span>
+          </button>
+          <!-- ナビメニュー -->
+          <div class="menu_overlay">
+            <ul>
+              <li class="only-sp"><a href="index.html">Home</a></li>
+              <li><a href="about.html">Profile</a></li>
+              <li><a href="index.html#works">Works</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <!-- トップに戻るボタン -->
     <div class="top_button">
@@ -64,79 +68,83 @@
     </div>
     <!-- メイン -->
     <main>
-      <section class="works">
-        <h2 class="title">Works</h2>
-        <div class="works_inner">
-          <div class="works_top">
-            <h1>野菜定期便　LP</h1>
-            <img src="../img/vegevege.png" alt="野菜定期便　LP" width="869" height="570" />
-            <p>地域の季節野菜を詰め合わせた「季節のお野菜セット定期便」のセールス用LPを制作しました。</p>
-            <p>
-              本LPは、商品のキャンペーン告知と広告の受け口として機能し、初回限定価格や数量限定の特典をわかりやすく訴求することを目的としています。
-            </p>
-            <p>ターゲットは、共働きのご夫婦や小さなお子様がいる家庭を中心に、60〜70代のご夫婦も含む幅広い層です。</p>
-            <p>そのため、年齢や性別を問わず親しみやすく、明るく健康的な印象を与えるデザインを心がけました。</p>
-            <p>LP内では、購入までの導線をシンプルに設計し、購入ボタンからカートへスムーズに進めるユーザーフローを意識。</p>
-            <p>キャンペーンの内容である「初回限定価格980円（税込）」や「100セット限定」の特典を強調し、購買意欲を促進しています。</p>
-            <p>全体のカラートーンは野菜の自然なイメージに合わせ、安心感と新鮮さを感じられる配色でまとめました。</p>
+      <div class="container_works">
+        <section class="works">
+          <h2 class="title">Works</h2>
+          <div class="works_inner">
+            <div class="works_top">
+              <h1>野菜定期便　LP</h1>
+              <img src="../img/vegevege.png" alt="野菜定期便　LP" width="869" height="570" />
+              <p>地域の季節野菜を詰め合わせた「季節のお野菜セット定期便」のセールス用LPを制作しました。</p>
+              <p>
+                本LPは、商品のキャンペーン告知と広告の受け口として機能し、初回限定価格や数量限定の特典をわかりやすく訴求することを目的としています。
+              </p>
+              <p>ターゲットは、共働きのご夫婦や小さなお子様がいる家庭を中心に、60〜70代のご夫婦も含む幅広い層です。</p>
+              <p>そのため、年齢や性別を問わず親しみやすく、明るく健康的な印象を与えるデザインを心がけました。</p>
+              <p>LP内では、購入までの導線をシンプルに設計し、購入ボタンからカートへスムーズに進めるユーザーフローを意識。</p>
+              <p>キャンペーンの内容である「初回限定価格980円（税込）」や「100セット限定」の特典を強調し、購買意欲を促進しています。</p>
+              <p>全体のカラートーンは野菜の自然なイメージに合わせ、安心感と新鮮さを感じられる配色でまとめました。</p>
+            </div>
           </div>
-        </div>
-      </section>
-      <!-- 作品の情報 -->
-      <section class="works_info">
-        <div class="works_info_inner">
-          <dl>
-            <dt>クライアント</dt>
-            <dd>野菜の定期便　ベジベジ農園　様（架空）</dd>
+        </section>
+        <!-- 作品の情報 -->
+        <section class="works_info">
+          <div class="works_info_inner">
+            <dl>
+              <dt>クライアント</dt>
+              <dd>野菜の定期便　ベジベジ農園　様（架空）</dd>
 
-            <dt>ターゲット</dt>
-            <dd>共働きのご夫婦・子育て世代・60〜70代のご夫婦</dd>
+              <dt>ターゲット</dt>
+              <dd>共働きのご夫婦・子育て世代・60〜70代のご夫婦</dd>
 
-            <dt>目的</dt>
-            <dd>広告のセールスLP</dd>
+              <dt>目的</dt>
+              <dd>広告のセールスLP</dd>
 
-            <dt>製作範囲</dt>
-            <dd>デザイン</dd>
+              <dt>製作範囲</dt>
+              <dd>デザイン</dd>
 
-            <dt>使用ツール</dt>
-            <dd>Figma／Photoshop</dd>
+              <dt>使用ツール</dt>
+              <dd>Figma／Photoshop</dd>
 
-            <dt>製作期間</dt>
-            <dd>
-              <span class="task">情報設計・WF</span>
-              <span class="period">2日</span>
-            </dd>
-            <dd>
-              <span class="task">デザイン</span>
-              <span class="period">1週間</span>
-            </dd>
-          </dl>
-        </div>
-      </section>
-      <!-- サイトトップページ -->
-      <section class="works_view">
-        <figure class="works_view_image">
-          <img src="../img/vege_mock.png" alt="野菜の定期便ランディングページ" width="600" height="3060" />
-        </figure>
-      </section>
+              <dt>製作期間</dt>
+              <dd>
+                <span class="task">情報設計・WF</span>
+                <span class="period">2日</span>
+              </dd>
+              <dd>
+                <span class="task">デザイン</span>
+                <span class="period">1週間</span>
+              </dd>
+            </dl>
+          </div>
+        </section>
+        <!-- サイトトップページ -->
+        <section class="works_view">
+          <figure class="works_view_image">
+            <img src="../img/vege_mock.png" alt="野菜の定期便ランディングページ" width="600" height="3060" />
+          </figure>
+        </section>
+      </div>
     </main>
     <!-- お問い合わせ -->
     <section class="contact" id="contact">
-      <h2 class="title_flat">Contact</h2>
-      <div class="contact_inner">
-        <div class="contact_item">
-          <div class="contact_text">
-            <p>Thank you very much for taking the time to view my portfolio.</p>
-            <p>If you have any questions or would like to get in touch, please feel free to contact me.</p>
+      <div class="container">
+        <h2 class="title_flat">Contact</h2>
+        <div class="contact_inner">
+          <div class="contact_item">
+            <div class="contact_text">
+              <p>Thank you very much for taking the time to view my portfolio.</p>
+              <p>If you have any questions or would like to get in touch, please feel free to contact me.</p>
+            </div>
+            <div class="contact_mail">
+              <a class="mail_btn" href="mailto:j.v.xen19@gmail.com">j.v.xen19@gmail.com</a>
+            </div>
           </div>
-          <div class="contact_mail">
-            <a class="mail_btn" href="mailto:j.v.xen19@gmail.com">j.v.xen19@gmail.com</a>
-          </div>
-        </div>
-        <div class="contact_item">
-          <div class="sns">
-            <a href="#" target="_blank" rel="noopener noreferrer">X</a>
-            <a href="https://note.com/calm_ixora309" target="_blank" rel="noopener noreferrer">note</a>
+          <div class="contact_item">
+            <div class="sns">
+              <a href="#" target="_blank" rel="noopener noreferrer">X</a>
+              <a href="https://note.com/calm_ixora309" target="_blank" rel="noopener noreferrer">note</a>
+            </div>
           </div>
         </div>
       </div>

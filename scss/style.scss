@@ -3,3 +3,7 @@
 @use './foundation/base' as *;
 // 共通パーツ
 @use './object/component' as *;
+//ヘッダー
+@use './layout/header' as *;
+//フッター
+@use './layout/footer' as *;
