@@ -55,3 +55,142 @@
 }
 }
 // プロフィールセクション
+.profile_item {
+  display: grid;
+  grid-template-columns: 439px 1fr; // 左：画像、右：名前＋本文
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "img name"
+    "img text";
+  gap: 125px;
+   row-gap: 70px; 
+
+  .profile_img_col {
+    grid-area: img;
+    margin-top: 70px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .profile_name_col {
+    grid-area: name;
+    margin-top: 161px;
+    .name_en { 
+      font-size: 12px; 
+      font-weight: 300; 
+    }
+    .name_jp { 
+      font-size: 24px; 
+      margin-top: 16px; 
+    }
+  }
+
+  .profile_text_col {
+    grid-area: text;
+
+    h3 { 
+      font-size: 24px; 
+      margin: 0 0 108px 0; 
+    }
+    p { 
+      font-size: 14px; 
+      line-height: 1.7; 
+      margin-top: 12px; 
+    }
+    p:last-of-type { 
+      margin-top: 24px; 
+    }
+  }
+}
+
+.view_more_button {
+  margin-top: 40px;
+  text-align: end;
+
+  a {
+    display: inline-block;
+    padding: 24px 66px;
+    color: var(--colorKey);
+    border: 1px solid var(--colorKey);
+    border-radius: 9999px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 300;
+    transition: background 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background: var(--colorKey);
+      color: var(--maincolor);
+    }
+  }
+}
+// sp版
+@include media($sp) {
+  .profile_item {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+
+    // 上段（画像＋名前）
+    .profile_top {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 34px; // 画像と名前の間
+      width: 100%;
+    }
+
+    // 画像
+    .profile_img_col {
+      width: 126px;
+      height: 177px;
+      margin: 0; // PCの余白を打ち消し
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    // 名前
+    .profile_name_col {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 0; // PC版 margin を打ち消し
+
+      .name_en {
+        font-size: 10px; // 上書き成功
+      }
+      .name_jp {
+        font-size: 16px; // 上書き成功
+        margin-top: 10px; // PC版16pxを10pxに変更
+      }
+    }
+
+    // 本文
+    .profile_text_col {
+      h3 {
+        font-size: 14px;
+        margin: 0 0 40px 0;
+        text-align: center;
+      }
+      p {
+        font-size: 12px;
+        line-height: 1.7;
+        margin: 0;
+      }
+    }
+  }
+
+  .view_more_button {
+    text-align: center;
+    margin-top: 24px;
+  }
+}
+
+
+// 実績一覧

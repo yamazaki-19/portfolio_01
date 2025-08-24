@@ -25,7 +25,7 @@ position: fixed;
   background: var(--colorBlack);
   border-radius: 2px;
   overflow: hidden;
-  z-index: 1000;
+  z-index: 100;
 
   &::before {
     content: '';
@@ -67,5 +67,21 @@ position: fixed;
   }
   100% {
     transform: translateY(100px); 
+  }
+}
+
+// 共通h2タイトル
+.title {
+  writing-mode: vertical-rl; 
+  position: absolute;
+  color: var(--colorKey);
+  left: -12px;
+  font-size: 80px; 
+  font-weight: lighter;
+  z-index: 10;
+
+  @include media(768px) {
+    font-size: 40px; 
+    left: -6px;
   }
 }
