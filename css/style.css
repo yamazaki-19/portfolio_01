@@ -1004,9 +1004,9 @@ img {
     width: 100%;
   }
   .profile_item .profile_img_col {
-    width: 126px;
-    height: 177px;
-    margin: 0;
+    width: 153px;
+    height: 215px;
+    margin: 40px 0 0 0;
   }
   .profile_item .profile_img_col img {
     width: 100%;
