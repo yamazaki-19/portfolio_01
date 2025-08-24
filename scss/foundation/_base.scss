@@ -5,6 +5,7 @@ body {
   color: var(--colorBlack);
   font-size: 14px;
   font-family: var(--font);
+  line-height: 1;
 }
 a {
   transition: opacity var(--speed);
@@ -23,18 +24,21 @@ img {
 .container {
   width: 100%;
   max-width: 1360px;
-  margin: 0 auto;
-
+  margin-top:240px;
+  padding: 0 40px;
   @include media(max-width 768px) {
     max-width: 313px;
+    margin-top: 100px;
   }
 }
 .container_works{
   width: 100%;
-  max-width: 900px;
+  max-width: 900px;   
   margin: 0 auto;
+    margin-top:240px;
   padding: 0 40px;
   @include media(max-width 768px) {
     max-width: 313px;
+     margin-top: 100px;
   }
 }

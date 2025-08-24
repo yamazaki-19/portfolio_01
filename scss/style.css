@@ -425,6 +425,7 @@ template {
   --colorKey: #5e7939;
   --maincolor: #f7f7f2;
   --colororange:#CB4D05;
+  --colorlightgreen:#E6E7D7;
 }
 
 :root {
@@ -460,11 +461,13 @@ img {
 .container {
   width: 100%;
   max-width: 1360px;
-  margin: 0 auto;
+  margin-top: 240px;
+  padding: 0 40px;
 }
 @media (max-width: max-width 768px) {
   .container {
     max-width: 313px;
+    margin-top: 100px;
   }
 }
 
@@ -481,11 +484,16 @@ img {
 }
 
 .firstview {
-  margin-top: 160px;
+  margin-top: -80px;
+}
+.firstview .firstview_img {
+  display: block;
+  margin-left: -40px;
+  height: auto;
 }
 @media (max-width: 768px) {
-  .firstview {
-    margin-top: 100px;
+  .firstview .firstview_img {
+    margin-left: -40px;
   }
 }
 
@@ -514,7 +522,6 @@ img {
   padding-top: 80px;
   padding-left: 0;
   padding-bottom: 45px;
-  padding-right: 40px;
 }
 @media (max-width: 768px) {
   .container_header {
@@ -552,7 +559,7 @@ img {
   list-style: none;
 }
 .nav_pc .nav_list li:last-child {
-  margin-right: 86px;
+  margin-right: 5px;
 }
 .nav_pc .nav_list li.only-sp {
   display: none;

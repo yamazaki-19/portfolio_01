@@ -23,7 +23,6 @@
     padding-top: 80px;
     padding-left: 0;
     padding-bottom: 45px;
-    padding-right: 40px;
     @include media(768px) {
         padding-top: 60px;
         padding-right: 20px;
@@ -54,7 +53,7 @@
         padding:10px 0 0 0;
         list-style: none;
         li:last-child{
-            margin-right: 86px;
+            margin-right: 5px;
         }
         li.only-sp{
             display: none;

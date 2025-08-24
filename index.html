@@ -69,11 +69,14 @@
     <!-- ファーストビュー -->
     <section class="firstview">
       <div class="container">
-        <img src="./img/mv.png" alt="うさぎの写真" width="1055" height="400" />
+        <picture class="firstview_img">
+          <source srcset="./img/mv.png" media="(min-width: 768px)" />
+          <img src="./img/mv_sp.png" alt="うさぎの写真" width="1055" height="400" />
+        </picture>
         <div class="firstview_item">
-          <div class="firstview_titie">
-            <h1>ERIKO YAMAZAKI <br />portfolio</h1>
-            <p>web design / graphic design</p>
+          <div class="firstview_title">
+            <h1 class="firstview_title_h1">ERIKO YAMAZAKI <br />portfolio</h1>
+            <p class="firstview_title_item">web design / graphic design</p>
           </div>
           <div class="firstview_text">
             <p>小さな一歩が　心をはずませる</p>
@@ -84,6 +87,10 @@
         </div>
       </div>
     </section>
+    <!-- スクロールバー -->
+    <div class="scroll_bar">
+      <div class="scroll_bar_progress"></div>
+    </div>
     <!-- トップに戻るボタン -->
     <div class="top_button">
       <a href="#"><img src="./img/top_button.png" alt="トップに戻るボタン" width="109" height="98" /></a>
@@ -294,5 +301,6 @@
       </div>
     </footer>
     <script src="/js/hamburger.js" defer></script>
+    <script src="/js/scroll.js" defer></script>
   </body>
 </html>

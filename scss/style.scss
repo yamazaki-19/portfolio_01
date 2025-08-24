@@ -7,3 +7,12 @@
 @use './layout/header' as *;
 //フッター
 @use './layout/footer' as *;
+
+//トップページ
+@use './object/project/frontPage' as *;
+
+//アバウトページ
+@use './object/project/aboutPage' as *;
+
+//ワークスページ   
+@use './object/project/worksPage' as *;
