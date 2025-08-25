@@ -1,10 +1,11 @@
-@use '././foundation/settings/variable' as *;
-@use '././foundation/settings/mixin' as *;
+@use '/scss/foundation/settings/variable' as *;
+@use '/scss/foundation/settings/mixin' as *;
 
 // ファーストビューセクション
 .firstview{
     margin-top: -80px;
     position: relative;
+
     .firstview_img{
         display: block;
         margin-left: -40px; 
@@ -14,8 +15,8 @@
             margin-left: -40px;
         }
     }
- 
-  }
+
+
 // ファーストビュータイトル
 .firstview_item{
     margin-top: 40px;
@@ -52,8 +53,9 @@
     @include media(768px) {
         align-items: center;
         margin-top:80px ;
-}
-}
+    }
+  } 
+  }
 // プロフィールセクション
 .profile_item {
   display: grid;

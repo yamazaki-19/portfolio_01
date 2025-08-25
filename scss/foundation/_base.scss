@@ -1,4 +1,7 @@
 @use'./settings/index' as *;
+@use '././foundation/settings/variable' as *;
+@use '././foundation/settings/mixin' as *;
+
 // サイト全体の基本設定
 body {
   background-color: var(--maincolor);
