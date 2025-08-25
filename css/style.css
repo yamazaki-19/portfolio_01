@@ -498,6 +498,13 @@ img {
   transition: opacity 0.5s ease;
   z-index: 1000;
 }
+@media (max-width: 768px) {
+  .top_button {
+    width: 72.6666666667px;
+    height: 65.3333333333px;
+    right: 0;
+  }
+}
 
 .top_button.show {
   opacity: 1;
