@@ -81,11 +81,92 @@ position: fixed;
   color: var(--colorKey);
   left: -12px;
   font-size: 80px; 
-  font-weight: lighter;
+  font-weight: 300;
   z-index: 10;
 
   @include media(768px) {
     font-size: 40px; 
     left: -6px;
+  }
+}
+// 共通h2横タイトル
+.title_flat{
+  position: static;
+  color: var(--colorKey);
+  font-size: 80px;
+  font-weight: 300;
+
+  z-index: 10;
+}
+
+// コンタクトページ
+.contact_inner {
+  .contact_item {
+    margin-top: 80px;
+    display: flex;       // 横並び
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;           // 左右の間隔 
+    align-items: flex-end;
+    .contact_main {
+      flex: 1 1 50%;
+    }
+
+    .contact_text {
+      p {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.7;
+      }
+    }
+
+    .contact_mail {
+      margin-top: 80px;
+      display: flex;
+      flex-direction: row-reverse;
+      .mail_btn {
+        display: inline-block;
+        padding:23px 60px ;
+        border: 1px solid var(--colorKey);
+        border-radius: 999px;
+        background-color: var(--maincolor);
+        color: var(--colorKey);
+        font-weight: 300;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        &:hover {
+          background-color: var(--colorKey);
+          color: var(--maincolor);
+        }
+      }
+    }
+
+    .contact_sns {
+      flex: 1 1 30%;
+      .sns {
+        display: flex;
+        gap: 36px;
+        justify-content: flex-end;
+        align-items: flex-end;
+        a {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          background-color: var(--colorKey);
+          color: var(--maincolor);
+          font-weight: 300;
+          font-size: 12px;
+          transition: opacity 0.3s ease;
+          text-decoration: none;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+      }
+    }
   }
 }

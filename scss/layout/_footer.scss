@@ -1,6 +1,7 @@
 @use '../foundation/settings/variable' as *;
 @use '../foundation/settings/mixin' as *;
 .footer{
+    margin-top: 80px;
     background-color: var(--colorKey);
     padding: 14px 0;
     text-align: center;
