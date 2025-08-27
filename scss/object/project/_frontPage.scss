@@ -289,46 +289,75 @@
   }
 }
 
+
 // --- SP版（全部縦積み） ---
 @include media($sp) {
 
   .works_inner {
-    gap: 40px; 
-align-self: start;
-    .works_item {
-      flex-direction: column !important; // ジグザグ解除
-      align-items: center;
-      gap: 20px;
-      .works_content,
-      a {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+    align-items: center;
+
+    // PC指定をリセット
+    .works_item:nth-child(-n+3) {
+      display: block; 
+      height: auto; 
+      flex-direction: column; 
+      margin-bottom: 0;
+      .works_content {
+        margin-top: 20px; 
         width: 100%;
-        flex: none;
-      }
-       // view more ボタンを非表示
-        .view_more_button {
-          display: none;
-        }
-        .works_content {
-        margin-top: 0 !important;
-        h3{
-          font-size: 16px!important;
+        h3 { font-size: 16px; }
+        p { font-size: 12px; }
+        .tag_text {
+          margin-top: 20px;
+          p { font-size: 10px; }
+          span { font-size: 10px; font-weight: 300; }
         }
       }
+    }
+
+    .works_item {
+      width: 100%;
+      max-width: 313px; // ← 画像サイズ基準をSP用に揃える
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      a img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+      .view_more_button { display: none; }
     }
   }
 
   .works_sub_inner {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 80px;
+    margin-top: 0;
 
     .works_item {
       width: 100%;
-      align-items: center;
+      max-width: 313px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      a img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
     }
-    
   }
 }
+
 
 // コメント
 .coment{
