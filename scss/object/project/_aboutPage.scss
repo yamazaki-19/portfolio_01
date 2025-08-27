@@ -1,2 +1,235 @@
-@use '././foundation/settings/variable' as *;
-@use '././foundation/settings/mixin' as *;
+@use '../../foundation/settings/variable' as *;
+@use '../../foundation/settings/mixin' as *;
+// プロフィールセクション
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  // 上部プロフィール
+  .about_profile_inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+margin-top: 164px;
+    .about_profile_item {
+      display: flex;
+      gap: 135px;
+      align-items: flex-end;
+
+      .about_profile_img {
+        img{
+            width: auto;
+            height: auto;
+        }
+      }
+
+      .about_profile_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+
+        h3 {
+          font-size: 24px;
+          margin-top: 10px;
+        }
+
+        .about_profile_name {
+          font-size: 12px;
+          font-weight: 300;
+        }
+
+        .profile_text_item {
+          margin-top: 80px;
+
+          p {
+            line-height: 1.7;
+          }
+
+          p:nth-of-type(4),
+          p:nth-of-type(6) {
+            margin-top: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  // イントロダクション
+  .introduction {
+    margin-top: 240px;
+
+    .introduction_title {
+      font-size: 40px;
+      text-align: center;
+    }
+
+    .introduction_item {
+      margin-top: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 105px;
+
+      .introduction_img {
+        img {
+          width: auto;
+          height: auto;
+        }
+      }
+
+      .introduction_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: left;
+
+        p {
+          line-height: 1.7;
+        }
+        p:nth-of-type(3){
+            margin-top: 24px;
+          }
+        p:nth-of-type(5){
+            margin-top: 24px;
+        }
+      }
+    }
+  }
+}
+// --- SP時のレイアウト調整 ---
+@include media($sp) {
+  .profile {
+    .about_profile_inner {
+      .about_profile_item {
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+
+        .about_profile_text {
+          text-align: left;
+
+          .about_profile_name {
+            font-size: 10px;
+          }
+
+          h3 {
+            font-size: 16px;
+            margin-top: 10px;
+          }
+
+          .profile_text_item {
+            margin-top: 40px;
+            p {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    .introduction {
+      margin-top: 100px;
+
+      .introduction_title {
+        font-size: 16px; // ここでSPサイズ指定
+        text-align: center;
+      }
+
+      .introduction_item {
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 40px;
+        align-items: center;
+
+        .introduction_text {
+          text-align: left;
+          p {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// 経歴　横スクロール
+.bio_scroll {
+  overflow-x: auto;
+  padding: 20px 0;
+  cursor: none; 
+  position: relative;
+ul {
+    display: flex;
+    margin-left: 80px;
+    border-top: 1px solid var(--colorKey); 
+    position: relative;
+    width: max-content;
+  }
+ // カスタムスクロールバー（Chrome, Edge, Safari）
+ &::-webkit-scrollbar {
+    height: 6px; /* 横スクロールバーの高さ */
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent; 
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: #E6E7D7; 
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: #5E7939;
+  }
+}
+.bio_item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 240px;
+  padding-top: 20px;
+  margin-right: 120px;
+
+  .dot {
+    position: absolute;
+    top: -6px; // 線の上にdot
+    left: 0;
+    width: 12px;
+    height: 12px;
+    background-color: var(--colorKey);
+    border-radius: 50%;
+  }
+
+  time {
+    margin-top: 24px;
+    font-size: 12px;
+    color: var(--colorBlack);
+  }
+
+  p {
+    margin-top: 12px;
+    width: 225px;
+    color: var(--colorBlack);
+    line-height: 1.7;
+  }
+}
+ .bio_cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background-color: #E6E7D7 ;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.2s, transform 0.2s;
+    z-index: 9999;
+    opacity: 1;
+  }
