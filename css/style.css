@@ -618,6 +618,11 @@ img {
   font-weight: 300;
   z-index: 10;
 }
+@media (max-width: 768px) {
+  .title_flat {
+    font-size: 40px;
+  }
+}
 
 .contact_inner .contact_item {
   margin-top: 80px;
@@ -713,6 +718,91 @@ img {
   opacity: 0.8;
 }
 
+@media (max-width: 768px) {
+  .contact_inner .contact_item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 40px;
+  }
+  .contact_inner .contact_item .contact_main {
+    width: 100%;
+    margin-top: 0px;
+  }
+  .contact_inner .contact_item .contact_main .contact_text {
+    width: 157px;
+  }
+  .contact_inner .contact_item .contact_main .contact_text p {
+    font-size: 10px;
+    line-height: 1.7;
+    word-break: break-word;
+  }
+  .contact_inner .contact_item .contact_main .contact_mail {
+    margin-top: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact_inner .contact_item .contact_main .contact_mail .mail_btn {
+    padding: 23px 60px;
+    border-radius: 999px;
+    border: 1px solid var(--colorKey);
+    background-color: var(--maincolor);
+    color: var(--colorKey);
+    text-decoration: none;
+    font-weight: 300;
+    font-size: 14px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .contact_inner .contact_item .contact_main .contact_mail .mail_btn:hover {
+    background-color: var(--colorKey);
+    color: var(--maincolor);
+  }
+  .contact_inner .contact_item .contact_sns {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .contact_inner .contact_item .contact_sns .sns {
+    gap: 36px;
+  }
+  .contact_inner .contact_item .contact_sns .sns a {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--colorKey);
+    color: var(--maincolor);
+    font-size: 12px;
+    font-weight: 300;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-decoration: none;
+    -webkit-transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease;
+  }
+  .contact_inner .contact_item .contact_sns .sns a:hover {
+    opacity: 0.8;
+  }
+}
 .header {
   position: fixed;
   top: 0;
