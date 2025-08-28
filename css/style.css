@@ -630,6 +630,25 @@ img {
   }
 }
 
+.title_flat02 {
+  position: static;
+  color: var(--colorKey);
+  font-size: 80px;
+  font-weight: 300;
+  z-index: 10;
+}
+@media (max-width: 768px) {
+  .title_flat02 {
+    font-size: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .contact_inner .contact_item {
   margin-top: 80px;
   display: -webkit-box;
@@ -1793,5 +1812,246 @@ img {
   transition: background-color 0.2s, transform 0.2s, -webkit-transform 0.2s;
   z-index: 9999;
   opacity: 1;
+}
+
+.strengths .container_inner_str {
+  max-width: 900px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.strengths .strengths_inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 80px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 80px;
+}
+.strengths .strengths_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 240px;
+}
+.strengths .strengths_item h3 {
+  width: 220px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 20px;
+  padding: 10px 0;
+  color: var(--colorlightgreen);
+  background-color: var(--colororange);
+}
+.strengths .strengths_item .strengths_text {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.strengths .strengths_item .strengths_text p {
+  line-height: 1.7;
+}
+.strengths hr {
+  width: 100%;
+  max-width: 900px;
+  border: none;
+  border-top: 1px solid var(--colorKey);
+  margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+  .strengths .strengths_inner {
+    gap: 40px;
+    margin-top: 40px;
+  }
+  .strengths .strengths_item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 40px;
+  }
+  .strengths .strengths_item h3 {
+    width: 206px;
+    height: 40px;
+    padding: 12px 0;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .strengths .strengths_item .strengths_text {
+    width: 100%;
+  }
+  .strengths hr {
+    max-width: 100%;
+  }
+}
+.skills .container_inner {
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 80px;
+}
+.skills .skills_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: var(--colorlightgreen);
+  padding: 80px 40px 0 80px;
+  height: 510px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.skills .skills_item h3 {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  font-size: 24px;
+  color: var(--colorKey);
+}
+.skills .skills_item .skills_text dl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 40px;
+}
+.skills .skills_item .skills_text dl > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 40px;
+}
+.skills .skills_item .skills_text dt {
+  width: 80px;
+  font-weight: 300;
+  color: var(--colorKey);
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+.skills .skills_item .skills_text dd {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  width: 508px;
+  line-height: 1.7;
+  position: relative;
+  padding-bottom: 40px;
+}
+.skills .skills_item .skills_text dd::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--maincolor);
+}
+.skills .skills_item div.last dd::after {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .skills_item {
+    position: relative;
+    height: auto;
+    padding: 40px;
+  }
+  .skills_item h3 {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    font-size: 16px;
+    z-index: 1;
+  }
+  .skills_item .skills_text dl > div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 8px;
+  }
+  .skills_item .skills_text dl > div dt {
+    width: 100%;
+    font-size: 12px;
+  }
+  .skills_item .skills_text dl > div dd {
+    padding-bottom: 20px;
+    font-size: 14px;
+  }
+  .skills_item .skills_text dl > div dd::after {
+    width: 100%;
+  }
+}
+.message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.message .container_inner {
+  max-width: 735px;
+  width: 100%;
+}
+.message .message_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  font-size: 14px;
+  line-height: 1.7;
+  margin-top: 24px;
+}
+.message .message_text p:last-child {
+  margin-top: 24px;
+  text-align: center;
+}
+.message .message_title {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.7;
 }
 /*# sourceMappingURL=style.css.map */

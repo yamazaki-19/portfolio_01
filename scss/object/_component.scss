@@ -101,6 +101,18 @@ position: fixed;
   }
 }
 
+.title_flat02{
+  position: static;
+  color: var(--colorKey);
+  font-size: 80px;
+  font-weight: 300;
+  z-index: 10;
+   @include media(768px) {
+    font-size: 40px; 
+    display: flex;
+    justify-content: center;
+  }
+}
 // コンタクトページ
 .contact_inner {
   .contact_item {
