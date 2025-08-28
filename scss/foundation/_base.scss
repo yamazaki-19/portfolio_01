@@ -26,13 +26,18 @@ img {
 // コンテンツ幅の統一
 .container {
   width: 100%;
-  max-width: 1360px;
   margin-top:240px;
   padding: 0 40px;
 @include media($sp){
   margin-top: 100px;
 }
 }
+.container_bio {
+  width: 100%;
+  margin-top:80px;
+  padding: 0 40px;
+}
+
 .container_works{
   width: 100%;
   max-width: 900px;   
@@ -47,5 +52,4 @@ img {
     width: 100%;
     max-width: 1120px;
     margin: 0 auto;
-  
 }

@@ -13,7 +13,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-margin-top: 164px;
+    margin-top: 164px;
     .about_profile_item {
       display: flex;
       gap: 135px;
@@ -159,12 +159,12 @@ margin-top: 164px;
 // 経歴　横スクロール
 .bio_scroll {
   overflow-x: auto;
-  padding: 20px 0;
+  padding-bottom: 20px ;
+  padding-top: 80px;
   cursor: none; 
   position: relative;
 ul {
     display: flex;
-    margin-left: 80px;
     border-top: 1px solid var(--colorKey); 
     position: relative;
     width: max-content;
@@ -213,8 +213,9 @@ ul {
   }
 
   p {
-    margin-top: 12px;
+    margin-top: 18px;
     width: 225px;
+    font-size: 12px;
     color: var(--colorBlack);
     line-height: 1.7;
   }
