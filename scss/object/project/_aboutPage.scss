@@ -372,29 +372,38 @@ ul {
     display: none;
     }
   }
-}
+
  // SP対応
  @include media($sp) {
   .skills_item {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     height: auto;
-    padding: 40px;
+    padding: 40px 20px 0 20px;
 
     h3 {
       position: absolute;
-      top: -40px;
+      top: -50px;
       left: 50%;
       transform: translateX(-50%);
       font-size: 16px;
+      text-align: center;
       z-index: 1;
     }
 
     .skills_text {
       dl {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
         > div {
+          display: flex;
           flex-direction: column;
           align-items: flex-start;
-          gap: 8px;
+          gap: 10px;
 
           dt {
             width: 100%;
@@ -402,10 +411,16 @@ ul {
           }
 
           dd {
-            padding-bottom: 20px;
+            width: 100%;
+            margin-bottom: 40px;
             font-size: 14px;
             &::after {
-              width: 100%;
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
             }
           }
         }
@@ -413,7 +428,7 @@ ul {
     }
   }
 }
-
+}
 // メッセージ
 .message {
   display: flex;
@@ -442,4 +457,10 @@ ul {
     font-size: 14px;
     line-height: 1.7;
   }
+  @include media($sp){
+    .message_text{
+        font-size: 12px;
+    }
+  }
 }
+
