@@ -16,3 +16,10 @@
 
 //ワークスページ   
 @use './object/project/worksPage' as *;
+// 個別差分
+@use'./object/project/works01'as *;
+@use'./object/project/works02' as *;
+@use'./object/project/works03' as *;
+@use'./object/project/works04' as *;
+@use'./object/project/works05' as *;
+@use'./object/project/works06' as *;
