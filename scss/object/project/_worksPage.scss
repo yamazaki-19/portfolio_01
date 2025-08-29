@@ -1,2 +1,22 @@
 @use '../../foundation/settings/variable' as *;
 @use '../../foundation/settings/mixin' as *;
+// Works全体用コンテナ
+.works_inner{
+.works_top{
+    margin-top: 40px;
+    h1{
+        font-size: 16px;
+        margin: 0;
+    }
+    .works_top_img{
+        margin-top: 40px;
+        display: block;
+    }
+    .works_top_text{
+        display: block;
+        margin-top: 40px;
+        text-align: left;
+        line-height: 1.7;
+    }
+  }
+}

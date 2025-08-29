@@ -8,6 +8,8 @@
 
     .firstview_img{
         display: block;
+        width: 100%;
+        height: auto;
         margin-left: -40px; 
     }
     @include media(768px) {
@@ -235,7 +237,7 @@
       p{
         margin-top: 20px;
         font-size: 14px;
-        line-height: 1.7;
+        line-height: 1.7;}
        
       } .tag_text{
           color: var(--colorKey);
@@ -250,7 +252,7 @@
         }
     }
   }
-}
+
 
 // 下3つ（その他実績）
 .works_sub_inner {
@@ -311,7 +313,7 @@
         h3 { font-size: 16px; }
         p { font-size: 12px; }
         .tag_text {
-          margin-top: 20px;
+          margin-top:10px ;
           p { font-size: 10px; }
           span { font-size: 10px; font-weight: 300; }
         }

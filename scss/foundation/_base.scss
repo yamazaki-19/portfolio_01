@@ -44,6 +44,7 @@ img {
   margin: 0 auto;
   margin-top:240px;
   padding: 0 40px;
+  text-align: center;
   @include media($sp){
     margin-top: 100px;
   }
