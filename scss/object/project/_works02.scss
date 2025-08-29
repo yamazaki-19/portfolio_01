@@ -1,2 +1,38 @@
 @use '../../foundation/settings/variable' as *;
 @use '../../foundation/settings/mixin' as *;
+
+/* 制作時資料スライダー */
+.slider_wrapper {
+  margin-top: 40px; // 上余白
+  .slider {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px; // スライド間の余白
+    scroll-snap-type: x mandatory;
+
+    .slide {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+
+  figcaption {
+    text-align: center;
+    margin-top: 40px;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      border-bottom: 1px solid var(--colorKey);
+      margin-top: 40px;
+      width: 100%;
+    }
+  }
+}

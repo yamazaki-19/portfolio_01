@@ -1,7 +1,7 @@
 @use '../../foundation/settings/variable' as *;
 @use '../../foundation/settings/mixin' as *;
 // Works全体用コンテナ
-.works_inner{
+.works_content{
 .works_top{
     margin-top: 40px;
     h1{
@@ -9,14 +9,235 @@
         margin: 0;
     }
     .works_top_img{
-        margin-top: 40px;
+        margin-top: 80px;
         display: block;
+        @include media($sp){
+            margin-top: 40px;
+        }
     }
     .works_top_text{
         display: block;
-        margin-top: 40px;
+        margin-top: 80px;
         text-align: left;
         line-height: 1.7;
+        @include media($sp){
+            margin-top: 40px;
+        }
     }
   }
+//   サイトボタン
+  .view_site_button{
+    margin-top: 80px;
+    text-align: center;
+
+  a {
+    display: inline-block;
+    padding: 24px 66px;
+    color: var(--colorKey);
+    border: 1px solid var(--colorKey);
+    border-radius: 9999px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 300;
+    transition: background 0.3s ease, color 0.3s ease;
+
+    &:hover {
+      background: var(--colorKey);
+      color: var(--maincolor);
+    }
+    }
+    // SP用
+  @include media($sp) {
+    text-align: center; 
+    margin-top: 40px;
+    a {
+      display: inline-block;
+      width: 80%; 
+      max-width: 190px;
+      padding: 24px 0;
+      font-size: 12px;
+      text-align: center;
+    }
+   }
+  }
+
+//  モックアップ
+  .works_img{
+    margin-top: 80px;
+    @include media($sp){
+        margin-top: 40px;
+    }
+  }
+}
+
+// サイト情報
+.works_info {
+  margin-top: 80px;
+  width: 100%;
+  dl {
+    display: grid;
+    grid-template-columns: 230px 1fr;
+    border-top: 1px solid var(--colorKey);
+
+    dt,
+    dd {
+      border-bottom: 1px solid var(--colorKey);
+      padding: 40px 0;
+    }
+
+    dt {
+      font-weight: 300;
+      text-align: left;
+    }
+
+    dd {
+      text-align: left;
+      span.task {
+        display: inline-block;
+        width: 120px;
+        font-weight: 300;
+      }
+      span.period {
+        display: inline-block;
+        width: 80px;
+      }
+
+      a {
+        color: var(--colorKey);
+        text-decoration: underline;
+      }
+    }
+    // 制作期間の項目
+    dd.production {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+      padding-bottom: 0; 
+    }
+    .production_item {
+      display: flex;
+      gap: 20px;
+      .task {
+        width: 200px;
+        font-weight: 300;
+      }
+      .period {
+        width: 80px;
+      }
+    }
+
+    // 制作期間全体の下線
+    dd.production::after {
+      content: '';
+      display: block;
+      margin-top: 40px;
+    }
+  }
+
+  .production_image {
+    border-bottom: 1px solid var(--colorKey);
+    padding: 40px 0;
+    margin: 0;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    figcaption {
+      margin-top: 40px;
+      text-align: center;
+    }
+  }
+}
+// スマホ版
+@include media($sp) {
+  .works_info {
+    margin-top: 40px;
+    dl {
+      display: flex;
+      flex-direction: column;
+      dt {
+        font-size: 12px;
+        margin-top: 40px;
+        border-bottom: none; // 線はddで出す
+        padding: 0;
+      }
+
+      dd {
+        font-size: 12px;
+        line-height: 1.7;
+        margin-top: 10px;
+        padding: 0;
+        padding-bottom: 40px;
+        border-bottom: 1px solid var(--colorKey); // 項目全体の下線
+
+        span.task,
+        span.period {
+          display: block;
+          width: 100%;
+          margin-bottom: 4px;
+        }
+
+        a {
+          color: var(--colorKey);
+          text-decoration: underline;
+        }
+
+        &.production {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          .production_item {
+            display: flex;
+            gap: 114px;
+            .task,
+            .period {
+              width: 100%;
+            }
+          }
+
+          &::after {
+            content: '';
+            display: block;
+            margin-top: 20px;
+            border-bottom: 1px solid var(--colorKey);
+          }
+        }
+      }
+    }
+
+    .production_image {
+      padding: 20px 0;
+      border-bottom: 1px solid var(--colorKey);
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      figcaption {
+        margin-top: 20px;
+        text-align: center;
+      }
+    }
+  }
+}
+// サイトトップページ（ペラ1枚）
+.website_view{
+    width: 100%;
+    max-width: 900px;
+    margin: 240px auto 0;
+    text-align: center;
+    img{
+        display: inline-block;
+    }
+    p{
+        font-size: 12px;
+        margin-top: 40px;
+    }
+    @include media($sp){
+        margin-top: 100px;
+    }
 }
