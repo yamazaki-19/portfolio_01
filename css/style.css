@@ -2301,7 +2301,6 @@ img {
     content: "";
     display: block;
     margin-top: 20px;
-    border-bottom: 1px solid var(--colorKey);
   }
   .works_info .production_image {
     padding: 20px 0;
@@ -2316,7 +2315,7 @@ img {
     text-align: center;
   }
 }
-.website_view {
+.website_view_kuri {
   width: 100%;
   max-width: 900px;
   margin: 240px auto 0;
@@ -2333,46 +2332,25 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.website_view img {
+.website_view_kuri img {
   display: inline-block;
+}
+@media (max-width: 768px) {
+  .website_view_kuri {
+    margin-top: 100px;
+    padding: 40px 53px;
+  }
 }
 
 .website_label {
   margin-top: 40px;
 }
-
-/* モーダルの基本 */
-.image_modal {
-  display: none;
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.image_modal img {
-  max-width: 90%;
-  max-height: 90%;
-  cursor: -webkit-grab;
-  cursor: grab;
-}
-
-.image_modal .close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 40px;
-  color: white;
-  cursor: pointer;
+@media (max-width: 768px) {
+  .website_label {
+    line-height: 1.7;
+    font-size: 10px;
+    text-align: left;
+  }
 }
 
 /* 制作時資料スライダー */
@@ -2384,7 +2362,7 @@ img {
   display: -ms-flexbox;
   display: flex;
   overflow-x: auto;
-  gap: 16px;
+  gap: 40px;
   -ms-scroll-snap-type: x mandatory;
       scroll-snap-type: x mandatory;
 }
@@ -2393,6 +2371,7 @@ img {
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
   scroll-snap-align: start;
+  margin-bottom: 20px;
 }
 .slider_wrapper .slider .slide img {
   display: block;
@@ -2410,5 +2389,77 @@ img {
   border-bottom: 1px solid var(--colorKey);
   margin-top: 40px;
   width: 100%;
+}
+
+.website_view_create01 {
+  width: 100%;
+  max-width: 900px;
+  margin: 240px auto 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 280px 150px;
+  background-color: #DAF4F8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.website_view_create01 img {
+  display: inline-block;
+}
+@media (max-width: 768px) {
+  .website_view_create01 {
+    margin-top: 100px;
+    padding: 40px 53px;
+  }
+}
+
+.website_label {
+  margin-top: 40px;
+}
+@media (max-width: 768px) {
+  .website_label {
+    line-height: 1.7;
+    font-size: 10px;
+    text-align: left;
+  }
+}
+
+.mock_view {
+  margin-top: 240px;
+}
+.mock_view .mock_view_item {
+  gap: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.mock_view .mock_view_item figcaption {
+  font-size: 12px;
+  margin-top: -40px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  .mock_view {
+    margin-top: 100px;
+    gap: 40px;
+  }
+  .mock_view .mock_view_item figcaption {
+    font-size: 12px;
+    line-height: 1.7;
+    text-align: left;
+    margin-top: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
