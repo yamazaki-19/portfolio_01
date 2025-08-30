@@ -8,13 +8,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const firstview = document.querySelector(".firstview");
 
   window.addEventListener("scroll", () => {
+    // トップボタン表示制御
     if (triggerSection && topButton) {
       const triggerPosition = triggerSection.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
-      if (triggerPosition < windowHeight) topButton.classList.add("show");
-      else topButton.classList.remove("show");
+      if (triggerPosition < windowHeight) {
+        topButton.classList.add("show");
+      } else {
+        topButton.classList.remove("show");
+      }
     }
 
+    // ファーストビュー スクロールバー
     if (firstview && scrollBar) {
       const firstviewHeight = firstview.offsetHeight;
       const scrollTop = window.scrollY;
@@ -22,6 +27,17 @@ document.addEventListener("DOMContentLoaded", () => {
       scrollBar.style.transform = `translateY(${progress * 152}px)`;
     }
   });
+
+  // トップボタンクリックでスムーススクロール
+  if (topButton) {
+    topButton.addEventListener("click", (e) => {
+      e.preventDefault();
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    });
+  }
 
   /*** -----------------------------
    * 経歴 横スクロール＆丸カーソル
@@ -53,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
     cursor.style.opacity = 0;
   });
 
-  // ドラッグ操作（背景全体で横スクロール可能）
+  // ドラッグ操作
   bioScroll.addEventListener("mousedown", (e) => {
     isDown = true;
     startX = e.pageX - bioScroll.offsetLeft;
