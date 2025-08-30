@@ -228,3 +228,42 @@
     }
   }
 }
+
+// 画像拡大
+.zoom_overlay {
+  position: fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background: rgba(10, 4, 0, 0.8);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  overflow-x:auto;
+  z-index:9999;
+}
+
+.zoom_slider {
+  display:flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+}
+
+.zoom_slide img {
+  max-width: 90vw;
+  max-height: 90vh;
+  display:block;
+  margin:0 auto;
+}
+
+.zoom_close {
+  position: fixed;
+  top: 40px;
+  right: 40px;
+  font-size: 40px;
+  font-weight: 300;
+  color: var(--maincolor);
+  cursor: pointer;
+  z-index: 10000;
+}
