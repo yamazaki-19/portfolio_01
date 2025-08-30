@@ -2360,11 +2360,11 @@ img {
   }
 }
 
-.website_label {
+.website_label_kuri {
   margin-top: 40px;
 }
 @media (max-width: 768px) {
-  .website_label {
+  .website_label_kuri {
     line-height: 1.7;
     font-size: 10px;
     text-align: left;
@@ -2478,6 +2478,17 @@ img {
     line-height: 1.7;
     text-align: left;
     margin-top: 0;
+  }
+}
+
+.website_label_mock {
+  margin-top: 40px;
+}
+@media (max-width: 768px) {
+  .website_label_mock {
+    line-height: 1.7;
+    font-size: 10px;
+    text-align: left;
   }
 }
 

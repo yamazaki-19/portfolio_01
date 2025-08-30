@@ -24,3 +24,12 @@
         }
     }
 }
+.website_label_mock{
+    margin-top: 40px;
+    @include media($sp){
+        line-height: 1.7;
+        font-size: 10px;
+        text-align: left;
+    }
+}
+
