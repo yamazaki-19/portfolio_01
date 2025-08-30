@@ -2320,19 +2320,59 @@ img {
   width: 100%;
   max-width: 900px;
   margin: 240px auto 0;
-  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 280px 150px;
+  background-color: #ECF6CF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 .website_view img {
   display: inline-block;
 }
-.website_view p {
-  font-size: 12px;
+
+.website_label {
   margin-top: 40px;
 }
-@media (max-width: 768px) {
-  .website_view {
-    margin-top: 100px;
-  }
+
+/* モーダルの基本 */
+.image_modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.image_modal img {
+  max-width: 90%;
+  max-height: 90%;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.image_modal .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
 }
 
 /* 制作時資料スライダー */

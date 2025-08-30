@@ -151,7 +151,14 @@
             </dl>
             <!-- 制作時の資料 -->
             <figure class="production_image">
-              <img src="/img/kurikuri_concept.png" alt="作成時のコンセプトメモ" width="440" height="300" />
+              <img
+                class="modal_content panzoom"
+                id="modalImage"
+                src="/img/kurikuri_concept.png"
+                alt="作成時のコンセプトメモ"
+                width="440"
+                height="300"
+              />
               <figcaption>制作時のメモの一部</figcaption>
             </figure>
           </div>
@@ -161,10 +168,10 @@
           <figure class="website_image">
             <img src="/img/kurikurien_site.png" alt="くりくり園Websiteトップページ" width="600" height="3740" />
           </figure>
-          <div class="website_label">
-            <p>※本サイトは、在籍時に自主制作したものであり、掲載については社内許可をいただいております。</p>
-          </div>
         </section>
+        <div class="website_label">
+          <p>※本サイトは、在籍時に自主制作したものであり、掲載については社内許可をいただいております。</p>
+        </div>
       </div>
     </main>
     <!-- お問い合わせ -->
@@ -202,5 +209,6 @@
     </footer>
     <script src="/js/hamburger.js" defer></script>
     <script src="/js/scroll.js" defer></script>
+    <script src="/js/zoom.js" defer></script>
   </body>
 </html>
