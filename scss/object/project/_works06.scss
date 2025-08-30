@@ -1,2 +1,20 @@
 @use '../../foundation/settings/variable' as *;
 @use '../../foundation/settings/mixin' as *;
+// サイトトップページ（ペラ1枚）
+.website_view_yasai{
+    width: 100%;
+    max-width: 900px;
+    margin: 240px auto 0;
+    justify-content: center;
+    padding: 280px 150px;
+    background:linear-gradient(to right,#fff1db,#fffaec);
+    display: flex;
+    flex-direction: column;
+    img{
+        display: inline-block;
+    }
+    @include media($sp){
+        margin-top: 100px;
+        padding: 40px 53px;
+    }
+    }

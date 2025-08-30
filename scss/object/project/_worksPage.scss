@@ -10,7 +10,7 @@
     }
     .works_top_img{
         margin-top: 80px;
-        display: block;
+        text-align: center;
         @include media($sp){
             margin-top: 40px;
         }
@@ -64,6 +64,7 @@
 //  モックアップ
   .works_img{
     margin-top: 80px;
+    text-align: center;
     @include media($sp){
         margin-top: 40px;
     }
@@ -208,7 +209,7 @@
     }
 
     .production_image {
-      padding: 20px 0;
+      padding: 40px 0;
       border-bottom: 1px solid var(--colorKey);
 
       img {
