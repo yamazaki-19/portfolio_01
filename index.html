@@ -21,7 +21,7 @@
     <meta property="og:image" content="画像のURL" />
     <!--絶対パスのURLで設定-->
     <meta name="twitter:card" content="summary" />
-    <meta name="twitter:site" content="@Twitterユーザー名" />
+    <meta name="twitter:site" content="@erimon_nz" />
     <meta property="og:site_name" content="ERIKO YAMAZAKI Portfolio" />
     <meta property="fb:app_id" content="appIDを入力" />
     <!--なければ削除-->
@@ -36,6 +36,15 @@
     <meta name="description" content="This is the portfolio of Eriko Yamazaki, aspiring web designer." />
   </head>
   <body>
+    <!-- ローディング画面 -->
+    <div id="loading">
+      <div class="loading-container">
+        <div class="loading-text" id="loading-text">0%</div>
+        <div class="loading-bar">
+          <div class="loading-bar-inner" id="loading-bar-inner"></div>
+        </div>
+      </div>
+    </div>
     <!-- ヘッダー -->
     <header class="header">
       <div class="container_header">
@@ -262,7 +271,7 @@
             <!-- 右側 -->
             <div class="contact_sns">
               <div class="sns">
-                <a href="#" target="_blank" rel="noopener noreferrer">X</a>
+                <a href="https://x.com/erimon_nz" target="_blank" rel="noopener noreferrer">X</a>
                 <a href="https://note.com/calm_ixora309" target="_blank" rel="noopener noreferrer">note</a>
               </div>
             </div>
@@ -279,5 +288,6 @@
     <script src="/js/hamburger.js" defer></script>
     <script src="/js/scroll.js" defer></script>
     <script src="/js/fade.js" defer></script>
+    <script src="/js/loading.js" defer></script>
   </body>
 </html>

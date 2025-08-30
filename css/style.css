@@ -503,18 +503,79 @@ img {
 /* ベースに記述 */
 .fade-in {
   opacity: 0;
-  -webkit-transform: translateY(30px);
-          transform: translateY(30px);
-  -webkit-transition: opacity 1.2s ease, -webkit-transform 1.2s ease;
-  transition: opacity 1.2s ease, -webkit-transform 1.2s ease;
-  transition: opacity 1.2s ease, transform 1.2s ease;
-  transition: opacity 1.2s ease, transform 1.2s ease, -webkit-transform 1.2s ease;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  -webkit-transition: opacity 0.6s ease, -webkit-transform 0.6s ease;
+  transition: opacity 0.6s ease, -webkit-transform 0.6s ease;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  transition: opacity 0.6s ease, transform 0.6s ease, -webkit-transform 0.6s ease;
 }
 
 .fade-in.visible {
   opacity: 1;
   -webkit-transform: translateY(0);
           transform: translateY(0);
+}
+
+/* ローディング画面 */
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--maincolor);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 9999;
+}
+
+.loading-container {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+}
+
+.loading-bar {
+  width: 100%;
+  height: 4px;
+  background-color: #eee;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.loading-bar-inner {
+  height: 100%;
+  width: 0;
+  background-color: var(--colorBlack);
+  -webkit-transition: width 0.1s linear;
+  transition: width 0.1s linear;
+}
+
+.loading-text {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 16px;
+  color: var(--colorBlack);
+}
+
+/* フェードアウト用 */
+#loading.fadeout {
+  opacity: 0;
+  -webkit-transition: opacity 0.8s ease;
+  transition: opacity 0.8s ease;
+  pointer-events: none;
 }
 
 .top_button {
