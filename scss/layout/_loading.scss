@@ -16,23 +16,22 @@
 
 .loading-container {
   width: 100%;
-  max-width: 600px;
-  text-align: center;
+  max-width: none;
   position: relative;
 }
 
 .loading-bar {
   width: 100%;
-  height: 4px;
-  background-color: #eee;
-  border-radius: 2px;
+  height: 2px;
+  background-color: var(--maincolor);
+  border-radius: 0;
   overflow: hidden;
 }
 
 .loading-bar-inner {
   height: 100%;
   width: 0;
-  background-color:var(--colorBlack); 
+  background-color: var(--colorBlack);
   transition: width 0.1s linear;
 }
 
