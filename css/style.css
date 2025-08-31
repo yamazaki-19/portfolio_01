@@ -500,7 +500,6 @@ img {
   margin: 0 auto;
 }
 
-/* ベースに記述 */
 .fade-in {
   opacity: 0;
   -webkit-transform: translateY(20px);
@@ -517,6 +516,29 @@ img {
           transform: translateY(0);
 }
 
+@media (min-width: 769px) {
+  body, a, button {
+    cursor: none;
+  }
+  .cursor {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(128, 128, 128, 0.3);
+    border-radius: 50%;
+    pointer-events: none;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    z-index: 9999;
+    -webkit-transition: width 0.3s ease, height 0.3s ease, background-color 0.1s ease;
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.1s ease;
+  }
+  .cursor.active {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(94, 121, 57, 0.3);
+  }
+}
 /* ローディング画面 */
 #loading {
   position: fixed;
@@ -1894,7 +1916,7 @@ img {
   transition: background-color 0.2s, transform 0.2s;
   transition: background-color 0.2s, transform 0.2s, -webkit-transform 0.2s;
   z-index: 9999;
-  opacity: 1;
+  opacity: 0;
 }
 
 .strengths .container_inner_str {
@@ -2408,7 +2430,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(10, 4, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2542,7 +2564,7 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(10, 4, 0, 0.8);
+  background: rgba(0, 0, 0, 0.8);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

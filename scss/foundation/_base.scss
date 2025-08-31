@@ -23,7 +23,7 @@ img {
   height: auto;
   vertical-align: middle;
 }
-// コンテンツ幅の統一
+// コンテンツ幅
 .container {
   width: 100%;
   margin-top:240px;
@@ -55,7 +55,7 @@ img {
     max-width: 1120px;
     margin: 0 auto;
 }
-/* ベースに記述 */
+// フェードイン
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -65,4 +65,29 @@ img {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+//カーソルを丸に
+@media (min-width: 769px) { 
+  body,a,button{
+    cursor: none;
+  }
+
+  .cursor {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: rgba(128,128,128,0.3);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: width 0.3s ease, height 0.3s ease, background-color 0.1s ease;
+  }
+
+  .cursor.active {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(94,121,57,0.3);
+  }
 }

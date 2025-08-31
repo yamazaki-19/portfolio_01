@@ -117,10 +117,10 @@ position: fixed;
 .contact_inner {
   .contact_item {
     margin-top: 80px;
-    display: flex;       // 横並び
+    display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    gap: 60px;           // 左右の間隔 
+    gap: 60px;
     align-items: flex-end;
     .contact_main {
       flex: 1 1 50%;
@@ -184,7 +184,7 @@ position: fixed;
     }
   }
 }
-// --- コンタクト SP版 ---
+//コンタクト SP版
 @include media($sp) {
 
   .contact_inner .contact_item {

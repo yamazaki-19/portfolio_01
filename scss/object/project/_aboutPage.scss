@@ -225,7 +225,7 @@ ul {
     transform: translate(-50%, -50%);
     transition: background-color 0.2s, transform 0.2s;
     z-index: 9999;
-    opacity: 1;
+    opacity: 0;
   }
 // 強み
 .strengths{
@@ -446,7 +446,7 @@ ul {
   }
 
   .message_title {
-    text-align: center;    // タイトルは中央
+    text-align: center;
     font-size: 14px;
     line-height: 1.7;
   }
@@ -456,4 +456,3 @@ ul {
     }
   }
 }
-
