@@ -18,7 +18,14 @@
       display: flex;
       gap: 135px;
       align-items: flex-end;
-
+      .about_profile_img{
+        img{
+        width: 435px;
+        height: auto;
+        display: block;
+        max-width: none;
+      } 
+    }
       .about_profile_text {
         display: flex;
         flex-direction: column;
@@ -100,8 +107,16 @@
       .about_profile_item {
         flex-direction: column;
         gap: 40px;
-        align-items: center;
-
+        align-items:flex-start;
+        .about_profile_img{
+          img{
+            width: 100%;
+            max-width:206px;
+            height: auto;
+            display: block;
+            margin-top: -100px;
+          }
+        }
         .about_profile_text {
           text-align: left;
 
@@ -128,7 +143,7 @@
       margin-top: 100px;
 
       .introduction_title {
-        font-size: 16px; // ここでSPサイズ指定
+        font-size: 16px;
         text-align: center;
       }
 
@@ -446,7 +461,7 @@ ul {
   }
 
   .message_title {
-    text-align: center;
+    text-align: center;    // タイトルは中央
     font-size: 14px;
     line-height: 1.7;
   }
@@ -456,3 +471,4 @@ ul {
     }
   }
 }
+
