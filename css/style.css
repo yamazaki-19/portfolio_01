@@ -1209,12 +1209,19 @@ img {
   color: var(--colororange);
   font-weight: 300;
 }
+.firstview .firstview_text .firstview_text_item {
+  text-align: left;
+}
 @media (max-width: 768px) {
   .firstview .firstview_text {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     margin-top: 80px;
+  }
+  .firstview .firstview_text p:nth-child(3),
+  .firstview .firstview_text p:nth-child(4) {
+    font-size: 10px;
   }
 }
 
@@ -1672,10 +1679,6 @@ img {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-}
-.profile .about_profile_inner .about_profile_item .about_profile_img img {
-  width: auto;
-  height: auto;
 }
 .profile .about_profile_inner .about_profile_item .about_profile_text {
   display: -webkit-box;
