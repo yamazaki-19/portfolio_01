@@ -771,9 +771,17 @@ img {
           flex: 1 1 50%;
 }
 .contact_inner .contact_item .contact_text p {
+  margin: 10px 0;
+}
+.contact_inner .contact_item .contact_text p:nth-child(1), .contact_inner .contact_item .contact_text p:nth-child(2) {
   font-size: 16px;
-  font-weight: 300;
   line-height: 1.7;
+}
+.contact_inner .contact_item .contact_text p:nth-child(3), .contact_inner .contact_item .contact_text p:nth-child(4) {
+  color: var(--colororange);
+  font-size: 14px;
+  line-height: 1.7;
+  font-weight: 300;
 }
 .contact_inner .contact_item .contact_mail {
   margin-top: 80px;
@@ -861,10 +869,13 @@ img {
   .contact_inner .contact_item .contact_main .contact_text {
     width: 157px;
   }
-  .contact_inner .contact_item .contact_main .contact_text p {
+  .contact_inner .contact_item .contact_main .contact_text p:nth-child(1), .contact_inner .contact_item .contact_main .contact_text p:nth-child(2) {
+    font-size: 14px;
+    margin: 0;
+  }
+  .contact_inner .contact_item .contact_main .contact_text p:nth-child(3), .contact_inner .contact_item .contact_main .contact_text p:nth-child(4) {
     font-size: 10px;
-    line-height: 1.7;
-    word-break: break-word;
+    margin: 0;
   }
   .contact_inner .contact_item .contact_main .contact_mail {
     margin-top: 40px;
