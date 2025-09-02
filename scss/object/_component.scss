@@ -1,6 +1,6 @@
 @use '../foundation/settings/variable' as *;
 @use '../foundation/settings/mixin' as *;
-// トップに戻るボタン
+// トップボタン
 .top_button {
 position: fixed;
   bottom: 20px;
@@ -195,7 +195,6 @@ position: fixed;
 }
 //コンタクト SP版
 @include media($sp) {
-
   .contact_inner .contact_item {
     flex-direction: column;
     align-items: center;
