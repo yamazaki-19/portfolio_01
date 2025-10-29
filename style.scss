@@ -1,0 +1,28 @@
+// 初期設定
+@use'./foundation/reset' as *;
+@use './foundation/base' as *;
+// ローディング
+@use'./layout/loading' as *;
+// 共通パーツ
+@use './object/component' as *;
+//ヘッダー
+@use './layout/header' as *;
+//フッター
+@use './layout/footer' as *;
+
+//トップページ
+@use './object/project/frontPage' as *;
+
+//アバウトページ
+@use './object/project/aboutPage' as *;
+
+//ワークスページ   
+@use './object/project/worksPage' as *;
+// 個別差分
+@use'./object/project/works01'as *;
+@use'./object/project/works02' as *;
+@use'./object/project/works03' as *;
+@use'./object/project/works04' as *;
+@use'./object/project/works05' as *;
+@use'./object/project/works06' as *;
+@use'./object/project/works07' as *;
