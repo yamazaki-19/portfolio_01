@@ -4,6 +4,7 @@
 .works_content{
 .works_top{
     margin-top: 40px;
+
     h1{
         font-size: 16px;
         margin: 0;
@@ -22,8 +23,9 @@
     .works_top_text{
         display: block;
         margin-top: 80px;
+        font-size: 16px;
         text-align: left;
-        line-height: 1.7;
+        line-height: 2.0;
         @include media($sp){
             margin-top: 40px;
         }
@@ -91,7 +93,6 @@
     }
 
     dt {
-      font-weight: 300;
       text-align: left;
     }
 

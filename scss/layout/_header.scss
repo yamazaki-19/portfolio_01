@@ -69,7 +69,6 @@
     }
     }
 
-
     //ハンバーガーメニューpc非表示
     .hamburger{
         display: none;
@@ -144,4 +143,10 @@
 .hamburger.active span.hamburger_bar:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -8px);
   background-color: var(--maincolor);
+}
+#works {
+  scroll-margin-top: 200px; // PCヘッダー分
+  @include media(768px) {
+    scroll-margin-top: 100px; // SPヘッダー分
+  }
 }
