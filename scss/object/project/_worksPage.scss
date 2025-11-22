@@ -28,6 +28,9 @@
         line-height: 2.0;
         @include media($sp){
             margin-top: 40px;
+            font-size: 14px;
+              line-height: 1.7;
+          }
         }
     }
   }
@@ -75,7 +78,7 @@
         margin-top: 40px;
     }
   }
-}
+
 
 // サイト情報
 .works_info {
@@ -267,4 +270,89 @@
   color: var(--maincolor);
   cursor: pointer;
   z-index: 10000;
+}
+// サイト制作時のポイント
+.works_point {
+  margin-top: 80px;
+  @include media($sp) {
+    margin-top: 40px;
+  }
+  .works_point_inner {
+    display: flex;
+    flex-direction: column;
+    gap: 160px;
+    max-width: 1120px;
+    margin: 0 auto;
+    @include media($sp) {
+      gap: 80px;
+    }
+
+    .works_point_item {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      gap: 160px;
+      align-items: center;
+      text-align: left;
+
+      .works_point_title {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        aspect-ratio: 1;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--maincolor);
+        background-color: var(--colororange);
+        border-radius: 50%;
+        margin-bottom: 20px;
+
+        @include media($sp) {
+          width: 150px;
+          height: 150px;
+          font-size: 16px;
+          margin-bottom: 0;
+        }
+      }
+
+      .works_point_text {
+        display: flex;
+        flex-direction: column;
+        width: 400px;
+
+        img {
+          width: 100%;
+          max-width: 400px;
+          height: auto;
+
+          @include media($sp) {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 1.7;
+          margin-top: 20px;
+          @include media($sp) {
+            font-size: 14px;
+          }
+        }
+
+        @include media($sp) {
+          width: 100%;
+        }
+      }
+
+      @include media($sp) {
+        flex-direction: column; // タイトル・画像・文字を縦並び
+        align-items: center;
+        text-align:left;
+        gap: 40px;
+      }
+    }
+  }
 }
