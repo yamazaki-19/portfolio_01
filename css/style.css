@@ -445,6 +445,7 @@ body {
   font-size: 14px;
   font-family: var(--font);
   line-height: 1;
+  background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.02) 0, rgba(0, 0, 0, 0.02) 1px, transparent 1px, transparent 2px);
 }
 
 a {
@@ -960,6 +961,7 @@ img {
   height: 160px;
   background-color: var(--maincolor);
   z-index: 1000;
+  background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.02) 0, rgba(0, 0, 0, 0.02) 1px, transparent 1px, transparent 2px);
 }
 @media (max-width: 768px) {
   .header {
