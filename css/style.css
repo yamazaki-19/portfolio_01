@@ -1756,8 +1756,9 @@ img {
 .profile .about_profile_inner .about_profile_item .about_profile_text .profile_text_item p {
   line-height: 1.7;
 }
+.profile .about_profile_inner .about_profile_item .about_profile_text .profile_text_item p:nth-of-type(3),
 .profile .about_profile_inner .about_profile_item .about_profile_text .profile_text_item p:nth-of-type(4),
-.profile .about_profile_inner .about_profile_item .about_profile_text .profile_text_item p:nth-of-type(6) {
+.profile .about_profile_inner .about_profile_item .about_profile_text .profile_text_item p:nth-of-type(5) {
   margin-top: 24px;
 }
 .profile .introduction {
