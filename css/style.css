@@ -2577,9 +2577,9 @@ img {
 }
 @media (max-width: 768px) {
   .works_point .works_point_inner .works_point_item .works_point_title {
-    width: 150px;
-    height: 150px;
-    font-size: 16px;
+    width: 100px;
+    height: 100px;
+    font-size: 14px;
     margin-bottom: 0;
   }
 }
