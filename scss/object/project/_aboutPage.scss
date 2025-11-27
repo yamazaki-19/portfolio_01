@@ -227,6 +227,9 @@ ul {
     font-size: 14px;
     color: var(--colorBlack);
     line-height: 1.7;
+    @include media($sp){
+      font-size: 12px;
+    }
   }
 }
  .bio_cursor {
@@ -302,8 +305,8 @@ ul {
       gap: 40px; 
 
       h3 {
-        width: 50%;
-        height: 50%;
+        width: 150px;
+        height: 150px;
     aspect-ratio: 1;
     font-size: 14px;
         justify-content: center; 
@@ -311,6 +314,7 @@ ul {
 
       .strengths_text {
         width: 100%; 
+        font-size: 12px;
       }
     }
 

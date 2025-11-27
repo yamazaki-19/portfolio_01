@@ -1320,9 +1320,6 @@ img {
   line-height: 1.7;
   margin-top: 12px;
 }
-.profile_item .profile_text_col p:last-of-type {
-  margin-top: 12px;
-}
 
 .view_more_button {
   margin-top: 40px;
@@ -1936,6 +1933,11 @@ img {
   color: var(--colorBlack);
   line-height: 1.7;
 }
+@media (max-width: 768px) {
+  .bio_item p {
+    font-size: 12px;
+  }
+}
 
 .bio_cursor {
   position: fixed;
@@ -2036,8 +2038,8 @@ img {
     gap: 40px;
   }
   .strengths .strengths_item h3 {
-    width: 50%;
-    height: 50%;
+    width: 150px;
+    height: 150px;
     aspect-ratio: 1;
     font-size: 14px;
     -webkit-box-pack: center;
@@ -2046,6 +2048,7 @@ img {
   }
   .strengths .strengths_item .strengths_text {
     width: 100%;
+    font-size: 12px;
   }
   .strengths hr {
     max-width: 100%;
@@ -2327,15 +2330,17 @@ img {
   display: grid;
   -ms-grid-columns: 230px 1fr;
   grid-template-columns: 230px 1fr;
-  border-top: 1px solid var(--colorKey);
+  border-top: 1px solid var(--colorlightgreen);
 }
 .works_info dl dt,
 .works_info dl dd {
-  border-bottom: 1px solid var(--colorKey);
+  border-bottom: 1px solid var(--colorlightgreen);
   padding: 40px 0;
 }
 .works_info dl dt {
   text-align: left;
+  font-weight: 300;
+  color: var(--colorKey);
 }
 .works_info dl dd {
   text-align: left;
@@ -2380,7 +2385,7 @@ img {
   margin-top: 40px;
 }
 .works_info .production_image {
-  border-bottom: 1px solid var(--colorKey);
+  border-bottom: 1px solid var(--colorlightgreen);
   padding: 40px 0;
   margin: 0;
 }
@@ -2418,7 +2423,7 @@ img {
     margin-top: 10px;
     padding: 0;
     padding-bottom: 40px;
-    border-bottom: 1px solid var(--colorKey);
+    border-bottom: 1px solid var(--colorlightgreen);
   }
   .works_info dl dd span.task,
   .works_info dl dd span.period {
@@ -2715,7 +2720,7 @@ img {
 .slider_wrapper figcaption::after {
   content: "";
   display: block;
-  border-bottom: 1px solid var(--colorKey);
+  border-bottom: 1px solid var(--colorlightgreen);
   margin-top: 40px;
   width: 100%;
 }
@@ -3002,6 +3007,7 @@ img {
 @media (max-width: 768px) {
   .works_top_text02 {
     margin-top: 40px;
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=style.css.map */

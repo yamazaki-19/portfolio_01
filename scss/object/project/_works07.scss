@@ -26,5 +26,6 @@
         line-height: 1.7;
         @include media($sp){
             margin-top: 40px;
+            font-size: 14px;
         }
       }
