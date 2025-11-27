@@ -2330,11 +2330,11 @@ img {
   display: grid;
   -ms-grid-columns: 230px 1fr;
   grid-template-columns: 230px 1fr;
-  border-top: 1px solid var(--colorlightgreen);
+  border-top: 1px solid var(--colorKey);
 }
 .works_info dl dt,
 .works_info dl dd {
-  border-bottom: 1px solid var(--colorlightgreen);
+  border-bottom: 1px solid var(--colorKey);
   padding: 40px 0;
 }
 .works_info dl dt {
@@ -2385,7 +2385,7 @@ img {
   margin-top: 40px;
 }
 .works_info .production_image {
-  border-bottom: 1px solid var(--colorlightgreen);
+  border-bottom: 1px solid var(--colorKey);
   padding: 40px 0;
   margin: 0;
 }
@@ -2423,7 +2423,7 @@ img {
     margin-top: 10px;
     padding: 0;
     padding-bottom: 40px;
-    border-bottom: 1px solid var(--colorlightgreen);
+    border-bottom: 1px solid var(--colorKey);
   }
   .works_info dl dd span.task,
   .works_info dl dd span.period {

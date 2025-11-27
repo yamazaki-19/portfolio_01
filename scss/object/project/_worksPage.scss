@@ -87,11 +87,11 @@
   dl {
     display: grid;
     grid-template-columns: 230px 1fr;
-    border-top: 1px solid var(--colorlightgreen);
+    border-top: 1px solid var(--colorKey);
 
     dt,
     dd {
-      border-bottom: 1px solid var(--colorlightgreen);
+      border-bottom: 1px solid var(--colorKey);
       padding: 40px 0;
     }
 
@@ -146,7 +146,7 @@
   }
 
   .production_image {
-    border-bottom: 1px solid var(--colorlightgreen);
+    border-bottom: 1px solid var(--colorKey);
     padding: 40px 0;
     margin: 0;
 
@@ -181,7 +181,7 @@
         margin-top: 10px;
         padding: 0;
         padding-bottom: 40px;
-        border-bottom: 1px solid var(--colorlightgreen); // 項目全体の下線
+        border-bottom: 1px solid var(--colorKey); // 項目全体の下線
 
         span.task,
         span.period {
@@ -231,7 +231,7 @@
         margin-top: 20px;
         text-align: center;
       }
-    }
+      
   }
 }
 
