@@ -442,7 +442,7 @@ template {
 body {
   background-color: var(--maincolor);
   color: var(--colorBlack);
-  font-size: 14px;
+  font-size: 16px;
   font-family: var(--font);
   line-height: 1;
   background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.02) 0, rgba(0, 0, 0, 0.02) 1px, transparent 1px, transparent 2px);
@@ -1316,12 +1316,12 @@ img {
   margin: 0 0 108px 0;
 }
 .profile_item .profile_text_col p {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.7;
   margin-top: 12px;
 }
 .profile_item .profile_text_col p:last-of-type {
-  margin-top: 24px;
+  margin-top: 12px;
 }
 
 .view_more_button {
@@ -1932,7 +1932,7 @@ img {
 .bio_item p {
   margin-top: 18px;
   width: 225px;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--colorBlack);
   line-height: 1.7;
 }
@@ -2111,6 +2111,7 @@ img {
           flex: 1;
   width: 508px;
   line-height: 1.7;
+  font-size: 14px;
   position: relative;
   padding-bottom: 40px;
 }
