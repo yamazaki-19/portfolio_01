@@ -118,11 +118,17 @@
         text-decoration: underline;
       }
     }
+    // フォント調整
+.production {
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.05em;
+  line-height: 1.7em;
+}
     // 制作期間の項目
     dd.production {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 24px;
+      gap: 10px;
       padding-bottom: 0; 
     }
     .production_item {
@@ -273,18 +279,22 @@
   cursor: pointer;
   z-index: 10000;
 }
+}
 // サイト制作時のポイント
 .works_point {
   margin-top: 80px;
+
   @include media($sp) {
     margin-top: 40px;
   }
+
   .works_point_inner {
     display: flex;
     flex-direction: column;
     gap: 160px;
     max-width: 1120px;
     margin: 0 auto;
+
     @include media($sp) {
       gap: 80px;
     }
@@ -296,7 +306,12 @@
       gap: 160px;
       align-items: center;
       text-align: left;
-
+      border: 1px solid var(--colororange);
+      padding: 40px 56px;
+      border-radius: 50px;
+      font-family: "Noto Sans JP", sans-serif;
+      letter-spacing: 0.05em;
+      line-height: 1.7em;
       .works_point_title {
         width: 200px;
         height: 200px;
@@ -339,6 +354,7 @@
           font-size: 16px;
           line-height: 1.7;
           margin-top: 20px;
+
           @include media($sp) {
             font-size: 14px;
           }
@@ -350,11 +366,11 @@
       }
 
       @include media($sp) {
-        flex-direction: column; // タイトル・画像・文字を縦並び
+        flex-direction: column;
         align-items: center;
-        text-align:left;
+        text-align: left;
         gap: 40px;
       }
     }
   }
-}
+  }

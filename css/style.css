@@ -433,6 +433,7 @@ template {
 
 :root {
   --font: "helvetica", sans-serif;
+  --font-ja: "Noto Sans JP", sans-serif;
 }
 
 :root {
@@ -445,6 +446,7 @@ body {
   font-size: 16px;
   font-family: var(--font);
   line-height: 1;
+  letter-spacing: 0.05em;
   background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.02) 0, rgba(0, 0, 0, 0.02) 1px, transparent 1px, transparent 2px);
 }
 
@@ -456,6 +458,13 @@ a {
   a:hover {
     opacity: 0.7;
   }
+}
+
+.ja {
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.05em;
+  line-height: 1.7;
+  font-weight: 350;
 }
 
 img {
@@ -1264,6 +1273,10 @@ img {
             align-items: center;
     margin-top: 80px;
   }
+  .firstview .firstview_text p:nth-child(1),
+  .firstview .firstview_text p:nth-child(2) {
+    font-size: 10px;
+  }
   .firstview .firstview_text p:nth-child(3),
   .firstview .firstview_text p:nth-child(4) {
     font-size: 10px;
@@ -1301,10 +1314,11 @@ img {
 .profile_item .profile_name_col .name_en {
   font-size: 12px;
   font-weight: 300;
+  letter-spacing: 0.05em;
 }
 .profile_item .profile_name_col .name_jp {
   font-size: 24px;
-  margin-top: 16px;
+  font-weight: 400;
 }
 .profile_item .profile_text_col {
   -ms-grid-row: 3;
@@ -1312,11 +1326,10 @@ img {
   grid-area: text;
 }
 .profile_item .profile_text_col h3 {
-  font-size: 24px;
+  font-size: 20px;
   margin: 0 0 108px 0;
 }
 .profile_item .profile_text_col p {
-  font-size: 16px;
   line-height: 1.7;
   margin-top: 12px;
 }
@@ -2358,12 +2371,17 @@ img {
   color: var(--colorKey);
   text-decoration: underline;
 }
+.works_info dl .production {
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.05em;
+  line-height: 1.7em;
+}
 .works_info dl dd.production {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
   grid-template-columns: 1fr;
-  gap: 24px;
+  gap: 10px;
   padding-bottom: 0;
 }
 .works_info dl .production_item {
@@ -2472,54 +2490,50 @@ img {
     margin-top: 20px;
     text-align: center;
   }
+  .zoom_overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow-x: auto;
+    z-index: 9999;
+  }
+  .zoom_slider {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    gap: 20px;
+  }
+  .zoom_slide img {
+    max-width: 90vw;
+    max-height: 90vh;
+    display: block;
+    margin: 0 auto;
+  }
+  .zoom_close {
+    position: fixed;
+    top: 40px;
+    right: 40px;
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--maincolor);
+    cursor: pointer;
+    z-index: 10000;
+  }
 }
-.zoom_overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  overflow-x: auto;
-  z-index: 9999;
-}
-
-.zoom_slider {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  gap: 20px;
-}
-
-.zoom_slide img {
-  max-width: 90vw;
-  max-height: 90vh;
-  display: block;
-  margin: 0 auto;
-}
-
-.zoom_close {
-  position: fixed;
-  top: 40px;
-  right: 40px;
-  font-size: 40px;
-  font-weight: 300;
-  color: var(--maincolor);
-  cursor: pointer;
-  z-index: 10000;
-}
-
 .works_point {
   margin-top: 80px;
 }
@@ -2560,6 +2574,12 @@ img {
       -ms-flex-align: center;
           align-items: center;
   text-align: left;
+  border: 1px solid var(--colororange);
+  padding: 40px 56px;
+  border-radius: 50px;
+  font-family: "Noto Sans JP", sans-serif;
+  letter-spacing: 0.05em;
+  line-height: 1.7em;
 }
 .works_point .works_point_inner .works_point_item .works_point_title {
   width: 200px;
