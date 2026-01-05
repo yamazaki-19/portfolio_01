@@ -16,6 +16,9 @@
 //アバウトページ
 @use './object/project/aboutPage' as *;
 
+// 実績一覧ページ
+@use './object/worksview' as *;
+
 //ワークスページ   
 @use './object/project/worksPage' as *;
 // 個別差分
