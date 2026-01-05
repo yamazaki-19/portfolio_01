@@ -35,14 +35,9 @@
   .works__filter {
     flex-direction: column;
     align-items: center;
-    gap: 12px;
+    gap: 20px;
 
-    .filter-btn {
-      width: 160px;
-      padding: 10px 0;
-      font-size: 10px;
-      text-align: center;
-    }
+   
   }
 }
 
@@ -153,4 +148,14 @@
   height: 290px;
   object-fit: cover;
   display: block;
+}
+@include media($sp) {
+  .works_view_inner .works_item a {
+    width: 100%;
+    height: auto;
+  }
+
+  .works_view_inner .works_item a img {
+    height: auto;
+  }
 }

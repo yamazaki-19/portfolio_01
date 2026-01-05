@@ -2299,13 +2299,7 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 12px;
-  }
-  .works__filter .filter-btn {
-    width: 160px;
-    padding: 10px 0;
-    font-size: 10px;
-    text-align: center;
+    gap: 20px;
   }
 }
 .works_view_inner {
@@ -2445,6 +2439,15 @@ img {
   display: block;
 }
 
+@media (max-width: 768px) {
+  .works_view_inner .works_item a {
+    width: 100%;
+    height: auto;
+  }
+  .works_view_inner .works_item a img {
+    height: auto;
+  }
+}
 .works_content .works_top {
   margin-top: 40px;
 }
