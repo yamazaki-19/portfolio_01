@@ -2342,11 +2342,6 @@ img {
   font-size: 12px;
   font-weight: 300;
 }
-.works_view_inner .works_item:nth-child(3) {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 1;
-  grid-column: 1/2;
-}
 
 @media (max-width: 768px) {
   .works_inner {
