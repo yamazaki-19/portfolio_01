@@ -75,65 +75,25 @@
         </ul>
       </div>
     </header>
-
-    <!-- スクロールバー -->
-    <div class="scroll_bar">
-      <div class="scroll_bar_progress"></div>
-    </div>
     <!-- トップに戻るボタン -->
     <div class="top_button">
       <a href="#"><img src="/img/top_button.png" alt="トップに戻るボタン" width="109" height="98" /></a>
     </div>
 
-    <!-- Works -->
-    <section class="works">
+    <!-- Works一覧 -->
+    <section class="works_view">
       <div class="container">
         <h2 class="title">Works</h2>
-        <div class="container_inner">
-          <div class="works_inner">
-            <div class="works_item">
-              <a class="works02" href="/works/work02.html">
-                <img src="/img/create.png" alt="クリエイト美容専門学校 Web site" width="869" height="570" />
-              </a>
-              <div class="works_content">
-                <h3 class="ja">クリエイト美容専門学校</h3>
-                <p class="ja">
-                  スクール課題として、架空の美容専門学校様の新規Webページを、チームで制作しました。私は主にコーディングを担当しました。
-                </p>
-                <div class="tag_text">
-                  <p>チーム制作 / website</p>
-                  <span>cording</span>
-                </div>
-                <div class="view_more_button">
-                  <a href="works/work02.html">view more</a>
-                </div>
-              </div>
-            </div>
-            <div class="works_item">
-              <a class="works03" href="/works/work03.html">
-                <img src="/img/package.png" alt="お菓子パッケージ一覧" width="869" height="570" />
-              </a>
-              <div class="works_content">
-                <h3 class="ja">お菓子パッケージ一覧</h3>
-                <p class="ja">静岡県の和洋菓子店たこまん様の商品パッケージ（スリーブ）を制作しました。</p>
-                <div class="tag_text">
-                  <p>クライアントワーク / graphic</p>
-                  <span>graphic design</span>
-                </div>
-                <div class="view_more_button">
-                  <a href="/works/work03.html">view more</a>
-                </div>
-              </div>
-            </div>
-          </div>
+        <!-- フィルターボタン -->
+        <div class="works__filter">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="web">Web</button>
+          <button class="filter-btn" data-filter="graphic">Graphic</button>
         </div>
-      </div>
-    </section>
-    <section class="works_sub">
-      <div class="container">
-        <div class="works_sub_inner">
-          <div class="works_item">
-            <a class="works04" href="/works/work01.html">
+        <div class="works_view_inner">
+          <!-- くりくり園 -->
+          <div class="works_item web">
+            <a class="works01" href="/works/work01.html">
               <img src="/img/kurikurien.png" alt="くりくり園 Web site" width="440" height="290" />
             </a>
             <div class="works_content">
@@ -143,8 +103,32 @@
               <h3 class="ja">くりくり園</h3>
             </div>
           </div>
-
-          <div class="works_item">
+          <!-- クリエイト美容専門学校 -->
+          <div class="works_item web">
+            <a class="works02" href="/works/work02.html">
+              <img src="/img/create.png" alt="クリエイト美容専門学校 Web site" width="440" height="290" />
+            </a>
+            <div class="works_content">
+              <div class="tag_text">
+                <p>チーム制作 / website</p>
+              </div>
+              <h3 class="ja">クリエイト美容専門学校</h3>
+            </div>
+          </div>
+          <!-- お菓子パッケージ -->
+          <div class="works_item graphic">
+            <a class="works03" href="/works/work03.html">
+              <img src="/img/package.png" alt="お菓子パッケージ一覧" width="440" height="290" />
+            </a>
+            <div class="works_content">
+              <div class="tag_text">
+                <p>クライアントワーク / graphic</p>
+              </div>
+              <h3 class="ja">お菓子パッケージ一覧</h3>
+            </div>
+          </div>
+          <!-- クリエイト美容専門学校（別案） -->
+          <div class="works_item web">
             <a class="works04" href="/works/work04.html">
               <img src="/img/create02.png" alt="クリエイト美容専門学校 Web site（別案）" width="440" height="290" />
             </a>
@@ -155,8 +139,8 @@
               <h3 class="ja">クリエイト美容専門学校（別案）</h3>
             </div>
           </div>
-
-          <div class="works_item">
+          <!-- 株式会社関西ブリッジ運送 -->
+          <div class="works_item web">
             <a class="works05" href="/works/work05.html">
               <img src="/img/kansai.png" alt="株式会社関西ブリッジ運送 Web site" width="440" height="290" />
             </a>
@@ -168,7 +152,8 @@
               </div>
             </div>
           </div>
-          <div class="works_item">
+          <!-- 野菜定期便 LP -->
+          <div class="works_item web">
             <a class="works06" href="/works/work06.html">
               <img src="/img/vegevege.png" alt="野菜定期便 LP" width="440" height="290" />
             </a>
@@ -180,7 +165,8 @@
               </div>
             </div>
           </div>
-          <div class="works_item">
+          <!-- バナー -->
+          <div class="works_item web">
             <a class="works07" href="/works/work07.html">
               <img src="/img/bunner_moc01.png" alt="秋の推しスイーツ投票キャンペーンバナー" width="440" height="290" />
             </a>
@@ -236,5 +222,6 @@
     <script src="/js/fade.js" defer></script>
     <script src="/js/loading.js" defer></script>
     <script src="/js/cursor.js" defer></script>
+    <script src="/js/works-filter.js" defer></script>
   </body>
 </html>

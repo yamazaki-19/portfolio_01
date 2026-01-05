@@ -300,8 +300,11 @@
     grid-column: 1 / 2; 
   }
 }
-
-
+.works_sub{.view_more_button {
+    text-align: center;
+    margin-top: 40px;
+  }
+} 
 // --- SP版（全部縦積み） ---
 @include media($sp) {
 
