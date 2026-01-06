@@ -1,0 +1,31 @@
+@use '../../foundation/settings/variable' as *;
+@use '../../foundation/settings/mixin' as *;
+// バナー
+.meishi_img{
+    width: 100%;
+    max-width: 900px;
+    margin: 80px auto 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+    position: relative;
+    img{
+        width: 540px;
+        height: auto;
+    }
+    @include media($sp){
+        margin-top: 40px;
+        
+    }
+      }
+
+      .works_top_text02{
+        margin-top: 80px;
+        line-height: 1.7;
+        @include media($sp){
+            margin-top: 40px;
+            font-size: 14px;
+        }
+      }

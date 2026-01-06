@@ -446,6 +446,7 @@ body {
   font-size: 16px;
   font-family: var(--font);
   line-height: 1;
+  font-weight: 350;
   letter-spacing: 0.05em;
   background-image: repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.02) 0, rgba(0, 0, 0, 0.02) 1px, transparent 1px, transparent 2px);
 }
@@ -2276,7 +2277,7 @@ img {
   font-size: 16px;
   font-family: var(--font);
   border: 1px solid var(--colorKey);
-  font-weight: 400;
+  font-weight: 300;
   letter-spacing: 0.1em;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -2492,7 +2493,7 @@ img {
   border-radius: 9999px;
   text-decoration: none;
   font-size: 12px;
-  font-weight: 300;
+  font-weight: 350;
   -webkit-transition: background 0.3s ease, color 0.3s ease;
   transition: background 0.3s ease, color 0.3s ease;
 }
@@ -2583,7 +2584,7 @@ img {
 }
 .works_info dl .production_item .task {
   width: 200px;
-  font-weight: 300;
+  font-weight: 350;
 }
 .works_info dl .production_item .period {
   width: 80px;
@@ -3219,6 +3220,85 @@ img {
   .works_top_text02 {
     margin-top: 40px;
     font-size: 14px;
+  }
+}
+
+.meishi_img {
+  width: 100%;
+  max-width: 900px;
+  margin: 80px auto 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  position: relative;
+}
+.meishi_img img {
+  width: 540px;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .meishi_img {
+    margin-top: 40px;
+  }
+}
+
+.works_top_text02 {
+  margin-top: 80px;
+  line-height: 1.7;
+}
+@media (max-width: 768px) {
+  .works_top_text02 {
+    margin-top: 40px;
+    font-size: 14px;
+  }
+}
+
+.website_view_kuri {
+  width: 100%;
+  max-width: 900px;
+  margin: 240px auto 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 280px 150px;
+  background-color: #ECF6CF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.website_view_kuri img {
+  display: inline-block;
+}
+@media (max-width: 768px) {
+  .website_view_kuri {
+    margin-top: 100px;
+    padding: 40px 53px;
+  }
+}
+
+.website_label_kuri {
+  margin-top: 40px;
+}
+@media (max-width: 768px) {
+  .website_label_kuri {
+    line-height: 1.7;
+    font-size: 10px;
+    text-align: left;
   }
 }
 /*# sourceMappingURL=style.css.map */

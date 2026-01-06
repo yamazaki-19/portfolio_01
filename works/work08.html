@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- 電話番号が自動的にリンク扱いにされるのを防ぐ。 -->
+    <meta name="format-detection" content="telephone=no" />
+
+    <!-- ファビコン画像の指定。 -->
+    <link rel="icon" type="image/png" href="/img/favicon.png" />
+
+    <!-- スマホでホームにサイトを追加したときに表示するアイコン画像の指定。 -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon.png" />
+
+    <!--SNS共有関係-->
+    <meta property="og:url" content="https://eriko-yamazaki.com/" />
+    <meta property="og:title" content="Works | ERIKO YAMAZAKI Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="This is the portfolio of Eriko Yamazaki, aspiring web designer." />
+    <meta property="og:image" content="/img/sns_img.png" />
+    <!--絶対パスのURLで設定-->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@erimon_nz" />
+    <meta property="og:site_name" content="Works | ERIKO YAMAZAKI Portfolio" />
+    <!-- WEBフォント -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&family=Zen+Kaku+Gothic+New&family=Zen+Old+Mincho&display=swap"
+      rel="stylesheet"
+    />
+    <!--基本のスタイルの設置-->
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>Works | ERIKO YAMAZAKI Portfolio</title>
+    <meta name="description" content="This is the portfolio of Eriko Yamazaki, aspiring web designer." />
+  </head>
+  <body>
+    <!-- ヘッダー -->
+    <header class="header">
+      <div class="container_header">
+        <!-- ロゴ -->
+        <a class="logo" href="/index.html">ERIKO YAMAZAKI</a>
+        <!-- ナビpc -->
+        <nav class="nav nav_pc">
+          <ul class="nav_list">
+            <li><a href="/worksview.html">Works</a></li>
+            <li><a href="/about.html">Profile</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <!-- ハンバーガーボタン -->
+        <button class="hamburger" aria-label="メニュー開閉">
+          <span class="hamburger_bar"></span>
+          <span class="hamburger_bar"></span>
+          <span class="hamburger_bar"></span>
+        </button>
+      </div>
+      <!-- spオーバーレイメニュー -->
+      <div class="menu_overlay_sp">
+        <ul class="nav_list">
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/worksview.html">Works</a></li>
+          <li><a href="/about.html">Profile</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+    <!-- トップに戻るボタン -->
+    <div class="top_button">
+      <a href="#"><img src="/img/top_button.png" alt="トップに戻るボタン" width="109" height="98" /></a>
+    </div>
+    <!-- メイン -->
+    <main>
+      <div class="container">
+        <h2 class="title">Works</h2>
+      </div>
+      <div class="container_works">
+        <section class="works">
+          <div class="works_content">
+            <div class="works_top">
+              <h1 class="ja">名刺</h1>
+              <img class="works_top_img" src="/img/meishi.png" alt="名刺" width="869" height="570" />
+              <div class="works_top_text">
+                <p class="ja">自分用の名刺を新たに作成しました。</p>
+                <p class="ja">ポートフォリオのデザインやカラーと連動させることで、一貫した世界観が伝わるよう設計しています。</p>
+                <p class="ja">表面には「NICE TO MEET YOU」という言葉を大胆に配置。</p>
+                <p class="ja">お会いした瞬間に生まれる期待感や、コミュニケーションを前向きに楽しむ姿勢を視覚的に表現しています。</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 名刺 
+          <div class="meishi_img">
+            <img src="/img/meishi.png" alt="名刺" width="540" height="540" />
+          </div>-->
+
+          <!-- 作品の情報 -->
+          <section class="works_info">
+            <div class="works_info_inner">
+              <dl>
+                <!-- /<dt class="ja">クライアント
+                <dd class="ja">sweets shop atelier CF　様（架空）</dd></dt> -->
+
+                <dt class="ja">ターゲット</dt>
+                <dd class="ja">初めてお会いする企業様・個人様</dd>
+
+                <dt class="ja">目的</dt>
+                <dd class="ja">ポートフォリオへの入り口にする</dd>
+
+                <dt class="ja">製作範囲</dt>
+                <dd class="ja">デザイン</dd>
+
+                <dt class="ja">使用ツール</dt>
+                <dd>Illustrator</dd>
+
+                <dt class="production">製作期間</dt>
+                <dd class="production">
+                  <div class="production_item">
+                    <span class="task">情報設計・WF・デザイン</span>
+                    <span class="period">4時間</span>
+                  </div>
+                </dd>
+              </dl>
+            </div>
+          </section>
+        </section>
+      </div>
+    </main>
+    <!-- お問い合わせ -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="title_flat">Contact</h2>
+        <div class="contact_inner">
+          <div class="contact_item">
+            <!-- 左側 -->
+            <div class="contact_main">
+              <div class="contact_text">
+                <p class="ja">ご覧いただき、ありがとうございます。</p>
+                <p class="ja">ご不明点がございましたら、こちらのメールアドレスまでお気軽にお問い合わせください。</p>
+                <p>Thank you very much for taking the time to view my portfolio.</p>
+                <p>If you have any questions or would like to get in touch, please feel free to contact me.</p>
+              </div>
+              <div class="contact_mail">
+                <a class="mail_btn" href="mailto:j.v.xen19@gmail.com?subject=お問い合わせ">j.v.xen19@gmail.com</a>
+              </div>
+            </div>
+            <!-- 右側 -->
+            <div class="contact_sns">
+              <div class="sns">
+                <a href="https://x.com/erimon_nz?t=QBW5E086LuoUHuEJ1cjNQg&s=09" target="_blank" rel="noopener noreferrer">X</a>
+                <a href="https://note.com/calm_ixora309" target="_blank" rel="noopener noreferrer">note</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- フッター -->
+    <footer class="footer">
+      <div class="container_footer">
+        <small>© 2025 ERIKO YAMAZAKI</small>
+      </div>
+    </footer>
+    <script src="/js/hamburger.js" defer></script>
+    <script src="/js/scroll.js" defer></script>
+    <script src="/js/fade.js" defer></script>
+    <script src="/js/cursor.js" defer></script>
+  </body>
+</html>
