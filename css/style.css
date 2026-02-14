@@ -2768,10 +2768,22 @@ img {
   text-align: left;
   border: 1px solid var(--colororange);
   padding: 40px 56px;
+  -webkit-box-shadow: 3px 3px 0px var(--colororange);
+          box-shadow: 3px 3px 0px var(--colororange);
   border-radius: 50px;
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0.05em;
   line-height: 1.7em;
+}
+@media (max-width: 768px) {
+  .works_point .works_point_inner .works_point_item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 40px;
+    padding: 20px 30px;
+  }
 }
 .works_point .works_point_inner .works_point_item .works_point_title {
   width: 200px;

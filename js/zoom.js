@@ -1,4 +1,31 @@
-// スライド
+// ===============================
+// タップ誤爆防止（スマホ用）
+// ===============================
+function addSafeTouchTap(element, callback) {
+  let startX = 0;
+  let startY = 0;
+  let moved = false;
+
+  element.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+    startY = e.touches[0].clientY;
+    moved = false;
+  });
+
+  element.addEventListener("touchmove", (e) => {
+    const dx = Math.abs(e.touches[0].clientX - startX);
+    const dy = Math.abs(e.touches[0].clientY - startY);
+    if (dx > 10 || dy > 10) moved = true;
+  });
+
+  element.addEventListener("touchend", (e) => {
+    if (!moved) callback(e);
+  });
+}
+
+// ===============================
+// スマホ用スライダー画像ズーム
+// ===============================
 const isSP = window.innerWidth <= 768;
 
 if (isSP) {
@@ -6,11 +33,9 @@ if (isSP) {
     const showZoom = (e) => {
       e.preventDefault();
 
-      // オーバーレイ
       const overlay = document.createElement("div");
       overlay.classList.add("zoom_overlay");
 
-      // スライダー
       const slider = document.createElement("div");
       slider.classList.add("zoom_slider");
 
@@ -26,7 +51,6 @@ if (isSP) {
 
       overlay.appendChild(slider);
 
-      // ×ボタン
       const closeBtn = document.createElement("div");
       closeBtn.classList.add("zoom_close");
       closeBtn.textContent = "×";
@@ -35,67 +59,14 @@ if (isSP) {
 
       document.body.appendChild(overlay);
 
-      // 最初にタップした画像から表示
       slider.scrollLeft = index * slider.offsetWidth;
 
-      // overlay背景クリックでも閉じる
       overlay.addEventListener("click", (e) => {
         if (e.target === overlay) overlay.remove();
       });
     };
 
     img.addEventListener("click", showZoom);
-    img.addEventListener("touchstart", showZoom);
+    addSafeTouchTap(img, showZoom);
   });
 }
-
-// 資料画像
-const allImgs = [
-  ...document.querySelectorAll(".slider img"),
-  ...document.querySelectorAll(".production_image img"),
-  ...document.querySelectorAll(".mock_view_item img"),
-];
-
-allImgs.forEach((img, index) => {
-  const showZoom = (e) => {
-    e.preventDefault();
-
-    const overlay = document.createElement("div");
-    overlay.classList.add("zoom_overlay");
-
-    const slider = document.createElement("div");
-    slider.classList.add("zoom_slider");
-
-    allImgs.forEach((i) => {
-      const slide = document.createElement("div");
-      slide.classList.add("zoom_slide");
-      const newImg = document.createElement("img");
-      newImg.src = i.src;
-      newImg.alt = i.alt;
-      slide.appendChild(newImg);
-      slider.appendChild(slide);
-    });
-
-    overlay.appendChild(slider);
-
-    // ×ボタンを作る
-    const closeBtn = document.createElement("div");
-    closeBtn.classList.add("zoom_close");
-    closeBtn.textContent = "×";
-    closeBtn.addEventListener("click", () => overlay.remove());
-    overlay.appendChild(closeBtn);
-
-    document.body.appendChild(overlay);
-
-    // 最初にクリック／タップした画像から表示
-    slider.scrollLeft = index * slider.offsetWidth;
-
-    // 背景クリックで閉じる（ボタンクリックは無視）
-    overlay.addEventListener("click", (e) => {
-      if (e.target === overlay) overlay.remove();
-    });
-  };
-
-  img.addEventListener("click", showZoom);
-  img.addEventListener("touchstart", showZoom);
-});

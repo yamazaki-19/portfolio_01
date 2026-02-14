@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    { threshold: 0.1 } // 画面に10％見えたら発火
+    { threshold: 0.1 }
   );
 
   sections.forEach((section) => observer.observe(section));

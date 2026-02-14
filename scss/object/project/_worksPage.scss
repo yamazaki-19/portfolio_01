@@ -308,10 +308,16 @@
       text-align: left;
       border: 1px solid var(--colororange);
       padding: 40px 56px;
+      box-shadow: 3px 3px 0px var(--colororange);
       border-radius: 50px;
       font-family: "Noto Sans JP", sans-serif;
       letter-spacing: 0.05em;
       line-height: 1.7em;
+       @include media($sp) {
+        flex-direction: column;
+        gap: 40px;
+        padding: 20px 30px;
+      }
       .works_point_title {
         width: 200px;
         height: 200px;
