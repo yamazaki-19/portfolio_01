@@ -535,7 +535,9 @@ img {
     position: fixed;
     width: 10px;
     height: 10px;
-    background-color: rgba(72, 71, 71, 0.3);
+    opacity: 0.3s ease;
+    background-color: var(--colorKey);
+    opacity: 0.5;
     border-radius: 50%;
     pointer-events: none;
     -webkit-transform: translate(-50%, -50%);
@@ -544,10 +546,14 @@ img {
     -webkit-transition: width 0.3s ease, height 0.3s ease, background-color 0.1s ease;
     transition: width 0.3s ease, height 0.3s ease, background-color 0.1s ease;
   }
+  .cursor.is-hidden {
+    opacity: 0;
+  }
   .cursor.active {
     width: 50px;
     height: 50px;
-    background-color: rgba(94, 121, 57, 0.3);
+    opacity: 0.5;
+    background-color: var(--colorKey);
   }
 }
 /* ローディング画面 */
@@ -1893,7 +1899,6 @@ img {
   overflow-x: auto;
   padding-bottom: 20px;
   padding-top: 80px;
-  cursor: none;
   position: relative;
 }
 .bio_scroll ul {
@@ -1966,19 +1971,51 @@ img {
   position: fixed;
   top: 0;
   left: 0;
-  width: 40px;
-  height: 40px;
-  background-color: #E6E7D7;
+  width: 50px;
+  height: 50px;
+  background-color: var(--colororange);
   border-radius: 50%;
   pointer-events: none;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  -webkit-transition: background-color 0.2s, -webkit-transform 0.2s;
-  transition: background-color 0.2s, -webkit-transform 0.2s;
-  transition: background-color 0.2s, transform 0.2s;
-  transition: background-color 0.2s, transform 0.2s, -webkit-transform 0.2s;
+  -webkit-transform: translate(-50%, -50%) scale(0.2);
+          transform: translate(-50%, -50%) scale(0.2);
   z-index: 9999;
   opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: opacity 0.25s ease, background-color 0.2s ease, -webkit-transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: opacity 0.25s ease, background-color 0.2s ease, -webkit-transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
+  transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 0.25s ease, background-color 0.2s ease;
+  transition: transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1), opacity 0.25s ease, background-color 0.2s ease, -webkit-transform 0.35s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.bio_cursor::before {
+  content: "← →";
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 2px;
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease;
+}
+
+/* bioに入ったら矢印も表示 */
+.bio_cursor.is-active::before {
+  opacity: 1;
+}
+
+/* 表示状態（bio_scrollに入ったとき） */
+.bio_cursor.is-active {
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
+  opacity: 0.9;
 }
 
 .strengths .container_inner_str {

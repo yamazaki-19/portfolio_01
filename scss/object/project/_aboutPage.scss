@@ -170,7 +170,6 @@
   overflow-x: auto;
   padding-bottom: 20px ;
   padding-top: 80px;
-  cursor: none; 
   position: relative;
 ul {
     display: flex;
@@ -232,20 +231,47 @@ ul {
     }
   }
 }
- .bio_cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 40px;
-    height: 40px;
-    background-color: #E6E7D7 ;
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    transition: background-color 0.2s, transform 0.2s;
-    z-index: 9999;
-    opacity: 0;
-  }
+.bio_cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background-color: var(--colororange);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%) scale(0.2); 
+  z-index: 9999;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    transform 0.35s cubic-bezier(.22,.61,.36,1),
+    opacity 0.25s ease,
+    background-color 0.2s ease;
+}
+.bio_cursor::before {
+  content: "← →"; 
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 2px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+/* bioに入ったら矢印も表示 */
+.bio_cursor.is-active::before {
+  opacity: 1;
+}
+
+/* 表示状態（bio_scrollに入ったとき） */
+.bio_cursor.is-active {
+  transform: translate(-50%, -50%) scale(1); 
+  opacity: 0.9;
+}
+
 // 強み
 .strengths{
     .container_inner_str{

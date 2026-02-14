@@ -1,18 +1,57 @@
+// =================================================
+// PCのみで実行
+// =================================================
 if (window.innerWidth >= 769) {
-  const cursor = document.createElement("div");
-  cursor.classList.add("cursor");
-  document.body.appendChild(cursor);
+  // ================================
+  // 通常カーソル生成
+  // ================================
+  const mainCursor = document.createElement("div");
+  mainCursor.classList.add("cursor");
+  document.body.appendChild(mainCursor);
 
-  // マウスの位置にジャストタイムで置く
+  // マウス追従（共通）
   document.addEventListener("mousemove", (e) => {
-    cursor.style.top = e.clientY + "px";
-    cursor.style.left = e.clientX + "px";
+    mainCursor.style.top = e.clientY + "px";
+    mainCursor.style.left = e.clientX + "px";
   });
 
-  // ボタンやリンクで拡大
+  // ボタン・リンクで拡大
   const hoverTargets = document.querySelectorAll("a, button");
   hoverTargets.forEach((el) => {
-    el.addEventListener("mouseenter", () => cursor.classList.add("active"));
-    el.addEventListener("mouseleave", () => cursor.classList.remove("active"));
+    el.addEventListener("mouseenter", () => {
+      mainCursor.classList.add("active");
+    });
+    el.addEventListener("mouseleave", () => {
+      mainCursor.classList.remove("active");
+    });
   });
+
+  // ================================
+  // bio_scroll専用カーソル生成
+  // ================================
+  const bioArea = document.querySelector(".bio_scroll");
+  const bioCursor = document.createElement("div");
+  bioCursor.classList.add("bio_cursor");
+  document.body.appendChild(bioCursor);
+
+  // bioカーソルもマウス追従
+  document.addEventListener("mousemove", (e) => {
+    bioCursor.style.top = e.clientY + "px";
+    bioCursor.style.left = e.clientX + "px";
+  });
+
+  // ================================
+  // カーソル切替（フェード）
+  // ================================
+  if (bioArea) {
+    bioArea.addEventListener("mouseenter", () => {
+      mainCursor.classList.add("is-hidden");
+      bioCursor.classList.add("is-active");
+    });
+
+    bioArea.addEventListener("mouseleave", () => {
+      mainCursor.classList.remove("is-hidden");
+      bioCursor.classList.remove("is-active");
+    });
+  }
 }
