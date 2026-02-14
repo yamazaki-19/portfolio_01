@@ -28,12 +28,12 @@ a {
   }
 }
 .ja {
-  font-family: YakuHanJP,"Zen Kaku Gothic New","Noto Sans JP", sans-serif;
+  font-family: "YakuHanJP","Zen Kaku Gothic New","Noto Sans JP", sans-serif;
   letter-spacing: 0.05em;
   line-height: 1.7;
   font-weight:350;
 }
-// 画像全て適用　はみ出さないようにしてすき間できるバグ対策
+
 img {
   max-width: 100%;
   height: auto;

@@ -462,7 +462,7 @@ a {
 }
 
 .ja {
-  font-family: YakuHanJP, "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
+  font-family: "YakuHanJP", "Zen Kaku Gothic New", "Noto Sans JP", sans-serif;
   letter-spacing: 0.05em;
   line-height: 1.7;
   font-weight: 350;
@@ -808,6 +808,8 @@ img {
   display: inline-block;
   padding: 23px 60px;
   border: 1px solid var(--colorKey);
+  -webkit-box-shadow: 6px 6px 0px var(--colorlightgreen);
+          box-shadow: 6px 6px 0px var(--colorlightgreen);
   border-radius: 999px;
   background-color: var(--maincolor);
   color: var(--colorKey);
@@ -1344,6 +1346,8 @@ img {
   padding: 24px 66px;
   color: var(--colorKey);
   border: 1px solid var(--colorKey);
+  -webkit-box-shadow: 6px 6px 0px var(--colorlightgreen);
+          box-shadow: 6px 6px 0px var(--colorlightgreen);
   border-radius: 9999px;
   text-decoration: none;
   font-size: 12px;
@@ -2490,6 +2494,8 @@ img {
   padding: 24px 66px;
   color: var(--colorKey);
   border: 1px solid var(--colorKey);
+  -webkit-box-shadow: 6px 6px 0px var(--colorlightgreen);
+          box-shadow: 6px 6px 0px var(--colorlightgreen);
   border-radius: 9999px;
   text-decoration: none;
   font-size: 12px;
@@ -2768,8 +2774,6 @@ img {
   text-align: left;
   border: 1px solid var(--colororange);
   padding: 40px 56px;
-  -webkit-box-shadow: 3px 3px 0px var(--colororange);
-          box-shadow: 3px 3px 0px var(--colororange);
   border-radius: 50px;
   font-family: "Noto Sans JP", sans-serif;
   letter-spacing: 0.05em;

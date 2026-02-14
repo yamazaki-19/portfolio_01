@@ -107,3 +107,20 @@ document.addEventListener("DOMContentLoaded", () => {
     bioScroll.style.setProperty("--scrollbar-color", "#E6E7D7");
   });
 });
+const bioScroll = document.querySelector(".bio_scroll");
+const bioLine = document.querySelector(".bio_line");
+
+bioScroll.addEventListener("scroll", () => {
+  const maxScroll = bioScroll.scrollWidth - bioScroll.clientWidth;
+  const scrollRate = bioScroll.scrollLeft / maxScroll;
+
+  const lineMaxWidth = bioScroll.scrollWidth;
+  bioLine.style.width = lineMaxWidth * scrollRate + "px";
+
+  // 一番右まで来たら矢印表示
+  if (scrollRate > 0.98) {
+    bioScroll.classList.add("end");
+  } else {
+    bioScroll.classList.remove("end");
+  }
+});
