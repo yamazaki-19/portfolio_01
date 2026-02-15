@@ -1940,7 +1940,7 @@ img {
           flex-direction: column;
   min-width: 240px;
   padding-top: 20px;
-  margin-right: 120px;
+  margin-right: 20px;
 }
 .bio_item .dot {
   position: absolute;
