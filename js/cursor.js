@@ -1,6 +1,3 @@
-// =================================================
-// PCのみで実行
-// =================================================
 if (window.innerWidth >= 769) {
   // ================================
   // 通常カーソル生成
@@ -54,4 +51,33 @@ if (window.innerWidth >= 769) {
       bioCursor.classList.remove("is-active");
     });
   }
+}
+// ================================
+// bio横スクロールをJSドラッグに変更
+// ================================
+if (bioArea) {
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  // マウス押したらドラッグ開始
+  bioArea.addEventListener("mousedown", (e) => {
+    isDown = true;
+    startX = e.pageX - bioArea.offsetLeft;
+    scrollLeft = bioArea.scrollLeft;
+  });
+
+  // マウス離したら終了
+  document.addEventListener("mouseup", () => {
+    isDown = false;
+  });
+
+  // ドラッグ中スクロール
+  document.addEventListener("mousemove", (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - bioArea.offsetLeft;
+    const walk = (x - startX) * 1.5; // ←スピード調整できる
+    bioArea.scrollLeft = scrollLeft - walk;
+  });
 }

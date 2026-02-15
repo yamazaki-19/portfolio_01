@@ -1899,6 +1899,8 @@ img {
   overflow-x: auto;
   padding-bottom: 20px;
   padding-top: 80px;
+  cursor: -webkit-grab;
+  cursor: grab;
   position: relative;
 }
 .bio_scroll ul {

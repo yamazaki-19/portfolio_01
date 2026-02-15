@@ -170,6 +170,7 @@
   overflow-x: auto;
   padding-bottom: 20px ;
   padding-top: 80px;
+   cursor: grab;
   position: relative;
 ul {
     display: flex;
@@ -196,6 +197,7 @@ ul {
     background-color: #5E7939;
   }
 }
+
 .bio_item {
   position: relative;
   display: flex;
